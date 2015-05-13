@@ -4,8 +4,8 @@
  * 2015-04-18 将图片参数放入json数据中缓存起来，避免对DOM的频繁操作
  */
 $(document).ready(function() {
-	$('#wrapper').css({'haha':'url("/images/09.cur") !important'});
-	
+	var ww = $(window).width();
+    var wh = $(window).height();
 	// 鼠标相对文档的偏移量
 	var x;
 	var y;
@@ -99,26 +99,40 @@ $(document).ready(function() {
 	}
 
 	// 将图片属性放在标签中以免重复计算
-	jQuery('.col').each(function() {
+	$('.col').each(function() {
 		var _this = $(this);
 		get_middle_line(_this,function() {
 			_this.find('.anim-photo img').load(function() {
-				$(this).attr('style','top:-4320');
+				$(this).attr('style','top:-'+(ww*0.62-30)*8+'');
 				_this.find('.first-photo').hide();
 			});
 		});
 	});
 
-	$(document).mousemove(function() {
-		x = event.clientX;
-		y = event.clientY;
-		$('#tennisball').css({'left':x-40,'top':y-40});
+	$('body').on('touchstart',function(e) {
+		e.preventDefault();
+		x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
+        y = e.originalEvent.targetTouches[0].clientY.toFixed(2);
+		$('#football').css({'left':x-40,'top':start_y-40});
 		for (index in container_attr) {
 			get_offset(index,container_attr[index]);
-			// console.log(container_attr[attr]);
 		} 
-		// $('.col').each(function() {
-		// 	get_offset($(this));
-		// });
+	});
+	$('body').on('touchmove',function(e) {
+		e.preventDefault();
+		x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
+        y = e.originalEvent.targetTouches[0].clientY.toFixed(2);
+		$('#football').css({'left':x-40,'top':y-40});
+		for (index in container_attr) {
+			get_offset(index,container_attr[index]);
+		} 
+	});
+	$('body').mousemove(function() {
+		x = event.clientX;
+		y = event.clientY;
+		$('#football').css({'left':x-40,'top':y-40});
+		for (index in container_attr) {
+			get_offset(index,container_attr[index]);
+		} 
 	});
 });
