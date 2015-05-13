@@ -11,8 +11,8 @@
 
 <body>
     <!-- Menu -->
-    <button class="menu-button" style="display:none">Menu</button>
-    <aside class="menu" style="display:none">
+    <button class="menu-button"><span>Menu</span></button>
+    <aside class="menu">
         <h2><a href="javascript:;">LACOSTE LOOKBOOK</a></h2>
         <nav>
             <ul>
@@ -122,6 +122,7 @@
             <img style="width:50px;height:50px;" src="css/img/tennis.png">
         </div>
     </section>
+    <div class="main-mask"></div>
     <!-- End Page Content -->
     <div class="detail-box for_man-1">
         <button class="close">关闭</button>
@@ -199,6 +200,11 @@
     function setContentSize() {
         var ww = $(window).width();
         var wh = $(window).height();
+
+        /*menu*/
+        $(".menu nav").css({
+            height: wh-131
+        });
         
         /*main*/
         $(".main").css({width: ww, height: wh});
@@ -267,6 +273,25 @@
         $(".detail-box").removeClass("show");
         $(".main").removeClass("white");
         $("#equipe .block-content .content-partie .intro-partie .col").removeClass("active").removeClass("blur");
+    });
+
+    /*menu*/
+    $(".menu-button").click(function(){
+        if(!$(this).hasClass("in")){
+            $(this).addClass("in");
+            $(".menu").addClass("show");
+            $(".main-mask").addClass("show");
+        }
+        else {
+            $(this).removeClass("in");
+            $(".menu").removeClass("show");
+            $(".main-mask").removeClass("show");
+        }
+    });
+    $(".main-mask").click(function(){
+        $(this).removeClass("show");
+        $(".menu-button").removeClass("in");
+        $(".menu").removeClass("show");
     });
 </script>
 </body>
