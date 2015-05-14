@@ -14,13 +14,13 @@ $(document).ready(function() {
 	// 获得图片的中点，偏移量等参数
 	function get_middle_line(container,callback) {
 		var div = container.find('.first-photo');
-		offset = div.offset();
-		middle_top = offset.top + (div.height()/2);
-		middle_left = offset.left + (div.width()/2);
+		offset = container.offset();
+		middle_top = offset.top + (container.height()/2);
+		middle_left = offset.left + (container.width()/2);
 		// 为了防止计算tan值时x_offset接近0或等于0导致浏览器崩溃，事先算好某个范围，在这个范围内人头的方向是垂直的，3.73为tan(75度)的值
-		x_range = ((div.height()/3.73)).toFixed(2);
+		x_range = ((container.height()/3.73)).toFixed(2);
 		//length是一张头像默认高度
-		length = div.height();
+		length = container.height();
 		container_attr[container.attr('_index')] = {'middle_top':middle_top,'middle_left':middle_left,'top':offset.top,'bottom':offset.top + div.height(),'left':offset.left,'right':offset.left + div.width(),'x_range':x_range,'length':length};
 		if (callback) {
 			callback && callback();
@@ -42,7 +42,7 @@ $(document).ready(function() {
 		A3 = x_offset < 0 && y_offset <= 0;
 		A4 = x_offset >= 0 && y_offset < 0;
 		// 鼠标在图片中头像一直朝前
-		if ((x > attr.left && x < attr.right) && (y > attr.top && y < attr.bottom)) {
+		if ((x > attr.left && x < attr.right) && (y > attr.top && y < (attr.bottom - (attr.length*3)/4))) {
 			size =  12;
 		// 防止计算tan值时分母接近零导致浏览器崩溃，单独划分一块区域
 		} else if (Math.abs(x_offset) < x_range) {
@@ -109,28 +109,43 @@ $(document).ready(function() {
 		});
 	});
 
-	$('body').on('touchstart',function(e) {
+	// $('body').on('touchstart',function(e) {
+	// 	e.preventDefault();
+	// 	x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
+ //        y = e.originalEvent.targetTouches[0].clientY.toFixed(2);
+	// 	$('#tennisball').css({'left':x-25,'top':y-25});
+	// 	for (index in container_attr) {
+	// 		get_offset(index,container_attr[index]);
+	// 	} 
+	// });
+	$("#equipe .block-content .content-partie .intro-partie .col").on('touchstart',function(e){
+		e.preventDefault();
+        var _id=$(this).attr('id');
+        var _detail = $('.detail-box.for_'+_id);
+        $(".main").addClass("white");
+        $(this).siblings(".col").addClass("blur");
+        $(this).siblings(".col").removeClass("active");
+        $(this).removeClass("blur");
+        $(this).addClass("active");
+        _detail.addClass("show");
+    });
+	$('#flux-site,#tennisball').on('touchmove',function(e) {
 		e.preventDefault();
 		x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
         y = e.originalEvent.targetTouches[0].clientY.toFixed(2);
-		$('#football').css({'left':x-40,'top':start_y-40});
+		$('#tennisball').css({'left':x-25,'top':y-25});
 		for (index in container_attr) {
 			get_offset(index,container_attr[index]);
 		} 
 	});
-	$('body').on('touchmove',function(e) {
+	$('.main').on('touchmove',function(e) {
 		e.preventDefault();
-		x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
-        y = e.originalEvent.targetTouches[0].clientY.toFixed(2);
-		$('#football').css({'left':x-40,'top':y-40});
-		for (index in container_attr) {
-			get_offset(index,container_attr[index]);
-		} 
 	});
-	$('body').mousemove(function() {
+	$('#flux-site').mousemove(function(e) {
+		e.preventDefault();
 		x = event.clientX;
 		y = event.clientY;
-		$('#football').css({'left':x-40,'top':y-40});
+		$('#tennisball').css({'left':x-25,'top':y-25});
 		for (index in container_attr) {
 			get_offset(index,container_attr[index]);
 		} 
