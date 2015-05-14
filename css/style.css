@@ -175,12 +175,12 @@ button {
 }
 .menu h2 a {
     display: block;
-    width: 77px;
-    height: 100px;
+    width: 40px;
+    height: 45px;
     margin: 0 auto;
     text-indent: -9999px;
-    background: url(img/logo.png);
-    background-size: 77px 100px;
+    background: url(img/logo_s.png);
+    background-size: 40px 45px;
 }
 .menu ul li {
     margin-bottom: 5px;
