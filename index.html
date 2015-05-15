@@ -9,6 +9,16 @@
 </head>
 
 <body>
+    <script type="text/javascript">
+        //判断手机横竖屏状态：  
+        function get_orientation(){  
+          if(window.orientation==180||window.orientation == 0){  
+                window.location.href = 'portrait.html';
+           }
+         }
+         get_orientation();
+        window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", get_orientation, false);  
+    </script>
     <!-- Menu -->
     <button class="menu-button"><span>Menu</span></button>
     <aside class="menu">
@@ -191,7 +201,7 @@
             <a target="_blank" href="javascript:;">法律声明条款</a>
             <a target="_blank" href="javascript:;">ICP</a>
         </footer>
-        
+
     </div> -->
     <!-- END PORTRAIT -->
 
