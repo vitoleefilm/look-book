@@ -1,0 +1,157 @@
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>LACOSTE LOOKBOOK</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+</head>
+
+<body>
+    <!-- Menu -->
+    <button class="menu-button"><span>Menu</span></button>
+    <aside class="menu">
+        <h2><a href="javascript:;">LACOSTE LOOKBOOK</a></h2>
+        <nav>
+            <ul>
+                <li><a href="javascript:;">读爱网球</a>
+                </li>
+                <li><a href="javascript:;">爱情对对碰</a>
+                </li>
+                <li><a href="javascript:;">挑战快拍手</a>
+                </li>
+                <li><a href="javascript:;">0元飞巴黎</a>
+                </li>
+                <li><a href="javascript:;">产品型录</a>
+                </li>
+                <li><a href="javascript:;">趣扫红土场</a>
+                </li>
+                <li><a href="javascript:;">查找活动门店</a>
+                </li>
+                <li><a href="javascript:;">京东旗舰店</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- Menu End -->
+
+    <div class="main-mask"></div>
+
+    <!-- Portrait -->
+    <div class="portrait-box">
+        <h1><a href="javascript:;"><img src="css/img/logo.png" alt=""></a></h1>
+        <div class="gif">
+            <p>转至横屏，体验更佳</p>
+            <img src="css/img/portrait.gif" alt="">
+        </div>
+        <footer>
+            <a target="_blank" href="javascript:;">法律声明条款</a>
+            <a target="_blank" href="javascript:;">ICP</a>
+        </footer>
+    </div>
+    <!-- END PORTRAIT -->
+
+<script>
+    /*set content size*/
+    function setContentSize() {
+        var ww = $(window).width();
+        var wh = $(window).height();
+
+        /*menu*/
+        $(".menu nav").css({
+            height: wh-76
+        });
+        
+        /*main*/
+        $(".main").css({width: ww, height: wh});
+        $(".intro-partie").css({width: ww*0.62, height: wh});
+        $("#equipe .block-content .content-partie .intro-partie .col").css({
+            width: (ww*0.62-30)/3,
+            height: (ww*0.62-30)/1.5
+        });
+        $("#equipe .block-content .content-partie .intro-partie .col#man-1").css({
+            bottom: (ww*0.62-30)/4
+        });
+        $("#equipe .block-content .content-partie .intro-partie .col#man-2").css({
+            marginLeft: -(ww*0.62-30)/6,
+            bottom: (ww*0.62-30)/3.5
+        });
+        $("#equipe .block-content .content-partie .intro-partie .col#man-3").css({
+            bottom: (ww*0.62-30)/4
+        });
+        $("#equipe .block-content .content-partie .intro-partie .col#man-5").css({
+            marginLeft: -(ww*0.62-30)/6
+        });
+        $("#equipe .block-content .content-partie .intro-partie footer").css({
+            width: ww,
+            height: (ww*0.62-30)/3.5,
+            left: -(ww*0.19)
+        });
+
+        /*detail-box*/
+        $(".detail-box").css({
+            width: ww*0.3,
+            height: ww*0.4,
+            maxHeight: wh-20
+        });
+        $(".detail-box img").css({
+            height: ww*0.45-40-14-20-14-10-35,
+            maxHeight: wh-20-40-14-20-14-10-35
+        });
+        $(".for_man-1, .for_man-4").css({marginLeft: -((ww*0.62-30)/6)});
+        $(".for_man-3, .for_man-6").css({marginRight: -((ww*0.62-30)/6)});
+        if(ww<481) {
+            $(".detail-box img").css({
+                height: ww*0.3-40-14-20-14-10-55,
+                maxHeight: wh-20-40-14-20-14-10-55
+            });
+        }
+        
+    };
+    setContentSize();
+
+    $(window).resize(function(){
+        setContentSize();
+    }).resize();
+
+    /*Product Detail*/
+    $("#equipe .block-content .content-partie .intro-partie .col").click(function(){
+        var _id=$(this).attr('id');
+        var _detail = $('.detail-box.for_'+_id);
+        $(".main").addClass("white");
+        $(this).siblings(".col").addClass("blur");
+        $(this).siblings(".col").removeClass("active");
+        $(this).removeClass("blur");
+        $(this).addClass("active");
+        _detail.addClass("show");
+    });
+    $(".detail-box .close").click(function(){
+        $(".detail-box").removeClass("show");
+        $(".main").removeClass("white");
+        $("#equipe .block-content .content-partie .intro-partie .col").removeClass("active").removeClass("blur");
+    });
+
+    /*menu*/
+    $(".menu-button").click(function(){
+        if(!$(this).hasClass("in")){
+            $(this).addClass("in");
+            $(".menu").addClass("show");
+            $(".main-mask").addClass("show");
+        }
+        else {
+            $(this).removeClass("in");
+            $(".menu").removeClass("show");
+            $(".main-mask").removeClass("show");
+        }
+    });
+    $(".main-mask").click(function(){
+        $(this).removeClass("show");
+        $(".menu-button").removeClass("in");
+        $(".menu").removeClass("show");
+    });
+</script>
+</body>
+
+</html>
