@@ -6,20 +6,18 @@
     <title>LACOSTE LOOKBOOK</title>
     <link rel="stylesheet" href="css/style.css">
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
-    <script type="text/javascript" src="js/common.js"></script>
 </head>
 
 <body>
     <script type="text/javascript">
-        
         //判断手机横竖屏状态：  
-        function get_orientation(){  
-            if(window.orientation==90||window.orientation==-90){  
+        function get_orientation() {
+            if(window.orientation == 90 || window.orientation == -90){
                 window.location.href = 'index.html';
-            }  
+            }
         }
         get_orientation();
-        window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", get_orientation, false);  
+        window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", get_orientation, false);
     </script>
     <!-- Menu -->
     <button class="menu-button"><span>Menu</span></button>
@@ -63,9 +61,8 @@
         </footer>
     </div>
     <!-- END PORTRAIT -->
-
-<script>
-$(document).on('touchmove',function(e) {
+<script type="text/javascript">
+    $(document).on('touchmove',function(e) {
         e.preventDefault();
     });
 
@@ -91,8 +88,7 @@ $(document).on('touchmove',function(e) {
             $(this).addClass("in");
             $(".menu").addClass("show");
             $(".main-mask").addClass("show");
-        }
-        else {
+        } else {
             $(this).removeClass("in");
             $(".menu").removeClass("show");
             $(".main-mask").removeClass("show");

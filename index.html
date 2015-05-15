@@ -11,12 +11,12 @@
 <body>
     <script type="text/javascript">
         //判断手机横竖屏状态：  
-        function get_orientation(){  
-          if(window.orientation==180||window.orientation == 0){  
+        function get_orientation() {  
+            if(window.orientation == 180 || window.orientation == 0){  
                 window.location.href = 'portrait.html';
-           }
-         }
-         get_orientation();
+            }
+        }
+        get_orientation();
         window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", get_orientation, false);  
     </script>
     <!-- Menu -->
