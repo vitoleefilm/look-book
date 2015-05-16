@@ -210,7 +210,6 @@ button {
     background-size: 100% 1px;
     overflow: hidden;
     z-index: 100;
-    /*cursor: url('img/tennis.cur'),default;*/
 }
 .main:before {
     content: "";
@@ -249,57 +248,112 @@ button {
     visibility: visible;
     opacity: 1;
 }
+.bench {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-image: url(img/bg_02.png);
+    background-repeat: repeat-y;
+    background-size: 100% 1px;
+    overflow: hidden;
+    z-index: 75;
+}
+.ground {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 76;
+}
+.ground img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 #flux-site {
     position: relative;
     margin: 0;
     z-index: 160;
+}
+#flux-site .ribbon-blue {
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: -10%;
+    top: 55%;
+    background: #252c39;
+    z-index: 12;
+    -webkit-transform: rotate(15deg);
+    transform: rotate(15deg);
+}
+#flux-site .ribbon-red {
+    display: block;
+    position: absolute;
+    width: 110%;
+    right: -10%;
+    top: 40%;
+    background: #cd2927;
+    z-index: 10;
+    -webkit-transform: rotate(-40deg);
+    transform: rotate(-40deg);
+}
+#flux-site .ribbon-green {
+    display: block;
+    position: absolute;
+    width: 120%;
+    left: -10%;
+    top: 9%;
+    background: #007354;
+    z-index: 12;
+    -webkit-transform: rotate(-8deg);
+    transform: rotate(-8deg);
 }
 .partie .block-content .content-partie {
     position: relative;
 }
 .partie .block-content .content-partie .intro-partie {
     position: relative;
-    width: 60%;
-    margin: 0 auto;
-    text-align: center;
+    width: 100%;
+    margin: 0;
+    text-align: left;
 }
 #equipe .block-content .content-partie .intro-partie .col {
     position: absolute;
     -webkit-transition: opacity .5s ease-out;
     transition: opacity .5s ease-out;
 }
-#equipe .block-content .content-partie .intro-partie .col.blur {
-    opacity: .5;
-}
-#equipe .block-content .content-partie .intro-partie .col.active {
-    z-index: 1000 !important;
-}
 #equipe .block-content .content-partie .intro-partie .col#man-1 {
-    left: 10px;
-    z-index: 10;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
 }
 #equipe .block-content .content-partie .intro-partie .col#man-2 {
-    left: 50%;
-    z-index: 10;
+    bottom: 0;
+    z-index: 90;
 }
 #equipe .block-content .content-partie .intro-partie .col#man-3 {
-    right: 10px;
-    z-index: 10;
+    bottom: 0;
+    z-index: 80;
 }
 #equipe .block-content .content-partie .intro-partie .col#man-4 {
-    left: -10px;
-    bottom: 0;
-    z-index: 50;
+    z-index: 70;
 }
 #equipe .block-content .content-partie .intro-partie .col#man-5 {
     left: 50%;
     bottom: 0;
-    z-index: 50;
+    z-index: 60;
 }
 #equipe .block-content .content-partie .intro-partie .col#man-6 {
     right: -10px;
     bottom: 0;
     z-index: 50;
+}
+.click-fix-4, .click-fix-5, .click-fix-6 {
+    display: block;
+    position: absolute;
+    z-index: 120;
 }
 #equipe .block-content .content-partie .intro-partie footer {
     display: block;
@@ -373,7 +427,8 @@ button {
     height: 100%;
     overflow: hidden;
 }
-#equipe .block-content .content-partie .intro-partie .first-photo {
+#equipe .block-content .content-partie .intro-partie .first-photo,
+#equipe .block-content .content-partie .intro-partie .white-photo {
     position: absolute;
     left: 0;
     top: 0;
@@ -382,13 +437,13 @@ button {
     overflow: hidden;
     z-index: 10;
 }
-#equipe.active .block-content .content-partie .intro-partie .first-photo {
-    display: none
-}
-#equipe.active .block-content .content-partie .intro-partie .first-photo img {
+#equipe .block-content .content-partie .intro-partie .first-photo img,
+#equipe .block-content .content-partie .intro-partie .white-photo img {
     display: block;
+    position: relative;
     width: 100%;
     height: auto;
+    top: -8px;
 }
 #equipe .block-content .content-partie .intro-partie .anim-photo {
     position: absolute;
@@ -400,8 +455,21 @@ button {
 }
 #equipe .block-content .content-partie .intro-partie .anim-photo img {
     display: block;
+    position: absolute;
     width: 100%;
     height: auto;
+    top: -3px;
+}
+#equipe.active .block-content .content-partie .intro-partie .first-photo,
+#equipe .block-content .content-partie .intro-partie .col.active .first-photo,
+#equipe .block-content .content-partie .intro-partie .col.blur .white-photo {
+    display: block !important;
+}
+#equipe .block-content .content-partie .intro-partie .col.active .white-photo,
+#equipe .block-content .content-partie .intro-partie .col.blur .first-photo,
+#equipe .block-content .content-partie .intro-partie .col.active .anim-photo,
+#equipe .block-content .content-partie .intro-partie .col.blur .anim-photo {
+    display: none !important;
 }
 #equipe .block-content .content-partie .intro-partie .photo-viensla {
     position: relative;
@@ -418,7 +486,7 @@ button {
     background-color: #fff;
     text-align: center;
     font-size: 12px;
-    color: #000;
+    color: #717171;
     opacity: 0;
     z-index: -1;
     transition-property: all;
@@ -428,22 +496,15 @@ button {
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease-out;
 }
-.detail-box.for_man-1, .detail-box.for_man-4 {
-    left: 50%;
+.detail-box.for_man-1, .detail-box.for_man-2, .detail-box.for_man-4 {
+    right: 5%;
     -webkit-transform: translate(40px, 0);
     transform: translate(40px, 0);
 }
-.detail-box.for_man-3, .detail-box.for_man-6 {
-    right: 50%;
+.detail-box.for_man-3, .detail-box.for_man-5, .detail-box.for_man-6 {
+    left: 5%;
     -webkit-transform: translate(-40px, 0);
     transform: translate(-40px, 0);
-}
-.detail-box.for_man-2, .detail-box.for_man-5 {
-    bottom: auto;
-    top: 5px;
-    right: 10px;
-    -webkit-transform: translate(40px, 0);
-    transform: translate(40px, 0);
 }
 .detail-box.show {
     opacity: 1;
@@ -453,6 +514,7 @@ button {
 }
 
 .detail-box h3 {
+    font-size: 12px;
     margin-bottom: 20px;
 }
 .detail-box img {
@@ -468,14 +530,25 @@ button {
 }
 .detail-box a {
     display: block;
-    width: 85px;
-    height: 20px;
+    width: 50%;
     margin: 0 auto;
-    border: 1px solid #000;
-    line-height: 20px;
+    border: 1px solid #717171;
     text-align: center;
 }
-
+.racket {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    pointer-events: none;
+    z-index: 170;
+}
+.racket img {
+    display: block;
+    width: 100%;
+    height: auto;
+    background: none;
+}
 /*---- Portrait box ----*/
 .portrait-box {
     display: block;
