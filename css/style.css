@@ -700,7 +700,7 @@ button {
 .tc .inner {
     margin: 0 15px;
     font-size: 12px;
-    line-height: 16px;
+    line-height: 18px;
     color: #717171;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
@@ -710,7 +710,7 @@ button {
     margin-bottom: 10px;
     font-size: 14px;
     font-weight: bold;
-    line-height: 18px;
+    line-height: 21px;
 }
 .tc p {
     margin-bottom: 10px;
