@@ -526,72 +526,6 @@ button {
     position: absolute;
     z-index: 120;
 }
-#equipe .block-content .content-partie .intro-partie footer {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    font-size: 10px;
-    color: #77777a;
-    background-image: url(img/bg_02.png);
-    background-repeat: repeat-y;
-    background-size: 100% 1px;
-    z-index: 30;
-}
-#equipe .block-content .content-partie .intro-partie footer:after {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background: rgba(255,255,255,0.5);
-    visibility: hidden;
-    opacity: 0;
-    z-index: 35;
-    -webkit-transition: all .5s ease-out;
-    transition: all .5s ease-out;
-}
-.main.white #equipe .block-content .content-partie .intro-partie footer:after {
-    visibility: visible;
-    opacity: 1;
-}
-#equipe .block-content .content-partie .intro-partie footer li {
-    position: absolute;
-    right: 15px;
-    text-align: left;
-}
-#equipe .block-content .content-partie .intro-partie footer li:nth-child(1) {
-    height: 17px;
-    top: 50%;
-    line-height: 17px;
-    margin-top: -20px;
-}
-#equipe .block-content .content-partie .intro-partie footer li:nth-child(1):before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 14px;
-    height: 17px;
-    left: -24px;
-    top: 0;
-    background-position: -50px -28px;
-}
-#equipe .block-content .content-partie .intro-partie footer li:nth-child(2) {
-    height: 34px;
-    top: 50%;
-    line-height: 17px;
-}
-#equipe .block-content .content-partie .intro-partie footer li:nth-child(2):before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 16px;
-    height: 17px;
-    left: -24px;
-    top: 8px;
-    background-position: -64px -28px;
-}
 #equipe .block-content .content-partie .intro-partie .cadre-photo {
     position: relative;
     width: 100%;
@@ -649,7 +583,6 @@ button {
 
 .detail-box {
     position: fixed;
-    bottom: 5px;
     padding: 20px 40px;
     background-image: url(img/bg_03.png);
     background-repeat: repeat-x;
@@ -679,7 +612,7 @@ button {
 }
 .detail-box.show {
     opacity: 1;
-    z-index: 900;
+    z-index: 240;
     -webkit-transform: translate(0,0) !important;
     transform: translate(0,0) !important;
 }
