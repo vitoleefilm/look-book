@@ -17,7 +17,7 @@
             }
         }
         get_orientation();
-        window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", get_orientation, false);  
+        window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", get_orientation, false);
     </script>
     <!-- Menu -->
     <button class="menu-button"><span>Menu</span></button>
@@ -212,10 +212,10 @@
 
     <!-- LOADING PAGE -->
     <!-- 页面载入时loading-page淡入addClass=show 加载完成removeClass=show 两秒后淡出 -->
-    <div class="loading-page" style="display:none;">
+    <div class="loading-page" style="">
         <div class="inner">
             <h1><img src="css/img/logo.png" alt=""></h1>
-            <span class="progress">20%</span>
+            <span class="progress">0%</span>
         </div>
         <div class="ribbon ribbon-blue"></div>
         <div class="ribbon ribbon-red"></div>
@@ -344,9 +344,9 @@
     }).resize();
 
     /*game guide*/
-    setTimeout(function(){
-        $(".game-guide").addClass("show");
-    },500);
+    // setTimeout(function(){
+    //     $(".game-guide").addClass("show");
+    // },500);
     $(".game-guide .close").click(function(){
         $(".game-guide").removeClass("show");
     });

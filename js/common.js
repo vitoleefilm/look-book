@@ -6,6 +6,8 @@
 $(document).ready(function() {
 	var ww = $(window).width();
     var wh = $(window).height();
+
+    //////////////////////////////////////动画模块////////////////////////////////////
 	// 鼠标相对文档的偏移量
 	var x;
 	var y;
@@ -28,6 +30,40 @@ $(document).ready(function() {
 		}
 	}
 
+	//判断手机横竖屏状态：  
+    function get_orientation() {
+        if(window.orientation == -90 || window.orientation == 90 || window.orientation == undefined){
+        	// $('.loading-page').fadeIn(300,function() {
+        		$('.loading-page').addClass('show');
+        	// });
+        	var k = 1;
+        	// 将图片属性放在标签中以免重复计算
+            $('.col').each(function() {
+				var _this = $(this);
+				get_middle_line(_this,function() {
+					_this.find('.anim-photo img').load(function() {
+						var percent = (k*17);
+						if (percent == 102) {
+							percent = 100;
+						}
+						$('.loading-page').find('.progress').html(percent+'%');
+						k = k + 1;
+						$(this).attr('style','top:-'+((ww*0.352)*12+5)+'');
+						if (percent == 100) {
+							setTimeout(function() {
+								$('.loading-page').removeClass('show');
+								$('.loading-page').fadeOut(4000);
+							},4000);
+							
+						}
+						// _this.find('.first-photo').hide();
+					});
+				});
+			});
+        }
+    }
+    get_orientation();
+	
 	/**
 	 * 获得背景偏移量
 	 */
@@ -100,17 +136,6 @@ $(document).ready(function() {
 		container.find('.anim-photo img').attr('style','top:'+top_offset+'');
 	}
 
-	// 将图片属性放在标签中以免重复计算
-	$('.col').each(function() {
-		var _this = $(this);
-		get_middle_line(_this,function() {
-			_this.find('.anim-photo img').load(function() {
-				$(this).attr('style','top:-'+(ww*0.429-10)*12+'');
-				_this.find('.first-photo').hide();
-			});
-		});
-	});
-
 	// $('body').on('touchstart',function(e) {
 	// 	e.preventDefault();
 	// 	x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
@@ -120,6 +145,8 @@ $(document).ready(function() {
 	// 		get_offset(index,container_attr[index]);
 	// 	} 
 	// });
+
+	// 各种点击事件和触摸事件
 	$("#equipe .block-content .content-partie .intro-partie .col").on('touchstart',function(e){
 		e.preventDefault();
         var _id=$(this).attr('id');
@@ -144,7 +171,6 @@ $(document).ready(function() {
 		e.preventDefault();
 	});
 	$('#flux-site').mousemove(function(e) {
-		console.log(event.clientX);
 		e.preventDefault();
 		x = event.clientX;
 		y = event.clientY;
