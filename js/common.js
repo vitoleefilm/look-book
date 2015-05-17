@@ -16,15 +16,14 @@ $(document).ready(function() {
 	// 获得图片的中点，偏移量等参数
 	function get_middle_line(container,callback) {
 		offset = container.offset();
-		console.log(offset);
 		middle_top = offset.top + (container.height()*0.23);
 		middle_left = offset.left + (container.width()*0.66);
+		// $('div').css({'top':middle_top,left:middle_left,width:'1px',height:'1px',position:'fixed',color:'black'}).appendTo('body');
 		// 为了防止计算tan值时x_offset接近0或等于0导致浏览器崩溃，事先算好某个范围，在这个范围内人头的方向是垂直的，3.73为tan(75度)的值
 		x_range = ((container.height()/3.73)).toFixed(2);
 		//length是一张头像默认高度
 		length = ww*0.352;
 		container_attr[container.attr('_index')] = {'middle_top':middle_top,'middle_left':middle_left,'top':offset.top,'bottom':offset.top + container.height(),'left':offset.left,'right':offset.left + container.width(),'x_range':x_range,'length':length,'width':container.width()};
-		console.log(container_attr[container.attr('_index')]);
 		if (callback) {
 			callback && callback();
 		}
@@ -42,6 +41,7 @@ $(document).ready(function() {
 				var _this = $(this);
 				get_middle_line(_this,function() {
 					_this.find('.anim-photo img').load(function() {
+						console.log(1);
 						var percent = (k*17);
 						if (percent == 102) {
 							percent = 100;
@@ -52,11 +52,11 @@ $(document).ready(function() {
 						if (percent == 100) {
 							setTimeout(function() {
 								$('.loading-page').removeClass('show');
-								$('.loading-page').fadeOut(4000);
+								$('.loading-page').fadeOut(3000,function() {
+									// $(".game-guide").addClass('show');
+								});
 							},4000);
-							
 						}
-						// _this.find('.first-photo').hide();
 					});
 				});
 			});
@@ -79,16 +79,15 @@ $(document).ready(function() {
 		A3 = x_offset < 0 && y_offset <= 0;
 		A4 = x_offset >= 0 && y_offset < 0;
 		// 鼠标在图片中头像一直朝前
-		// if ((x > (attr.left+attr.width*0.55) && x < attr.right) && (y > attr.top && y < (attr.bottom - (attr.length*3)/4))) {
-		// 	size =  12;
-		// // 防止计算tan值时分母接近零导致浏览器崩溃，单独划分一块区域
-		// } else
-		if (Math.abs(x_offset) < x_range) {
-			if (y_offset < 0) {
-				size = 9;
-			} else {
-				size = 3;
-			}
+		if ((x > (attr.left+attr.width*0.55) && x < attr.right-attr.width*0.24) && (y > attr.top+attr.length*0.15 && y < (attr.bottom - attr.length*0.72))) {
+			size =  12;
+		// 防止计算tan值时分母接近零导致浏览器崩溃，单独划分一块区域
+		// } else if (Math.abs(x_offset) < x_range) {
+		// 	if (y_offset < 0) {
+		// 		size = 9;
+		// 	} else {
+		// 		size = 3;
+		// 	}
 		} else {
 			tan = y_offset/x_offset;
 			tan = tan.toFixed(2);
@@ -132,7 +131,7 @@ $(document).ready(function() {
 			}
 		}
 		length = attr.length;
-		top_offset = -(length*size+5);
+		top_offset = -(length*size+7);
 		container.find('.anim-photo img').attr('style','top:'+top_offset+'');
 	}
 
@@ -140,7 +139,7 @@ $(document).ready(function() {
 	// 	e.preventDefault();
 	// 	x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
  //        y = e.originalEvent.targetTouches[0].clientY.toFixed(2);
-	// 	$('#tennisball').css({'left':x-25,'top':y-25});
+	// 	$('#tennisball').css({'left':x-15,'top':y-15});
 	// 	for (index in container_attr) {
 	// 		get_offset(index,container_attr[index]);
 	// 	} 
@@ -162,7 +161,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
         y = e.originalEvent.targetTouches[0].clientY.toFixed(2);
-		$('#tennisball').css({'left':x-25,'top':y-25});
+		$('#tennisball').css({'left':x-15,'top':y-15});
 		for (index in container_attr) {
 			get_offset(index,container_attr[index]);
 		} 
@@ -174,7 +173,7 @@ $(document).ready(function() {
 		e.preventDefault();
 		x = event.clientX;
 		y = event.clientY;
-		$('#tennisball').css({'left':x-25,'top':y-25});
+		$('#tennisball').css({'left':x-15,'top':y-15});
 		for (index in container_attr) {
 			get_offset(index,container_attr[index]);
 		} 
