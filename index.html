@@ -137,12 +137,6 @@
                                 <div class="click-fix-6"></div>
                                 <div class="bench"></div>
                                 <div class="ground"><img src="css/img/ground.png" alt=""></div>
-                                <!-- <footer>
-                                    <ul>
-                                        <li>左右滑动网球</li>
-                                        <li>点击模特<br>查看商品详情</li>
-                                    </ul>
-                                </footer> -->
                             </div>
                         </div>
                     </div>
@@ -228,6 +222,19 @@
         <div class="ribbon ribbon-green"></div>
     </div>
     <!-- END LOADING PAGE -->
+
+    <!-- GAME GUIDE -->
+    <div class="game-guide">
+        <div class="inner">
+            <button class="close">关闭</button>
+            <p>
+                <span>左右滑动网球</span>
+                <span>点击模特</span>
+                <span>查看商品详情</span>
+            </p>
+        </div>
+    </div>
+    <!-- END GAME GUIDE -->
 
     <!-- Portrait -->
     <div class="portrait-box">
@@ -327,14 +334,7 @@
             height: ww*0.034,
             lineHeight: ww*0.034+'px'
         });
-        // $(".for_man-1, .for_man-4").css({marginLeft: -((ww*0.62-30)/6)});
-        // $(".for_man-3, .for_man-6").css({marginRight: -((ww*0.62-30)/6)});
-        // if(ww<481) {
-        //     $(".detail-box img").css({
-        //         height: ww*0.3-40-14-20-14-10-55,
-        //         maxHeight: wh-20-40-14-20-14-10-55
-        //     });
-        // }
+        
         
     };
     setContentSize();
@@ -342,6 +342,14 @@
     $(window).resize(function(){
         setContentSize();
     }).resize();
+
+    /*game guide*/
+    setTimeout(function(){
+        $(".game-guide").addClass("show");
+    },3000);
+    $(".game-guide .close").click(function(){
+        $(".game-guide").removeClass("show");
+    });
 
     /*Product Detail*/
     $("#equipe .block-content .content-partie .intro-partie .col").click(function(){
