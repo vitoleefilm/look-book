@@ -162,42 +162,54 @@
     <div class="detail-box for_man-1">
         <button class="close">关闭</button>
         <h3>LT12限量系列灰色T恤衫</h3>
-        <img src="images/product/01.png" alt="">
+        <div class="pic">
+            <img src="images/product/01.png" alt="">
+        </div>
         <span class="price">价格：590 元</span>
         <a target="_blank" href="http://item.jd.com/1543278289.html">立即购买</a>
     </div>
     <div class="detail-box for_man-2">
         <button class="close">关闭</button>
         <h3>LT12限量系列蓝色POLO衫</h3>
-        <img src="images/product/02.png" alt="">
+        <div class="pic">
+            <img src="images/product/02.png" alt="">
+        </div>
         <span class="price">价格：990 元</span>
         <a target="_blank" href="http://item.jd.com/1543281789.html">立即购买</a>
     </div>
     <div class="detail-box for_man-3">
         <button class="close">关闭</button>
         <h3>限量系列白色T恤衫</h3>
-        <img src="images/product/03.png" alt="">
+        <div class="pic">
+            <img src="images/product/03.png" alt="">
+        </div>
         <span class="price">价格：590 元</span>
         <a target="_blank" href="http://item.jd.com/1494360810.html">立即购买</a>
     </div>
     <div class="detail-box for_man-4">
         <button class="close">关闭</button>
         <h3>LT12限量系列蓝色T恤衫</h3>
-        <img src="images/product/04.png" alt="">
+        <div class="pic">
+            <img src="images/product/04.png" alt="">
+        </div>
         <span class="price">价格：590 元</span>
         <a target="_blank" href="http://item.jd.com/1543278289.html">立即购买</a>
     </div>
     <div class="detail-box for_man-5">
         <button class="close">关闭</button>
         <h3>LT12限量系列黑色T恤衫</h3>
-        <img src="images/product/05.png" alt="">
+        <div class="pic">
+            <img src="images/product/05.png" alt="">
+        </div>
         <span class="price">价格：590 元</span>
         <a target="_blank" href="http://item.jd.com/1543278289.htm">立即购买</a>
     </div>
     <div class="detail-box for_man-6">
         <button class="close">关闭</button>
         <h3>LT12限量系列黑色POLO衫</h3>
-        <img src="images/product/06.png" alt="">
+        <div class="pic">
+            <img src="images/product/06.png" alt="">
+        </div>
         <span class="price">价格：990 元</span>
         <a target="_blank" href="http://item.jd.com/1543274075.html">立即购买</a>
     </div>
@@ -205,14 +217,15 @@
     <!-- PRODUCT DETAIL END -->
 
     <!-- LOADING PAGE -->
-    <div class="loading-page" style="display:none">
+    <!-- 页面载入时loading-page淡入addClass=show 加载完成removeClass=show 两秒后淡出 -->
+    <div class="loading-page" style="display:none;">
         <div class="inner">
-            <h1>LACOSTE LOOKBOOK</h1>
+            <h1><img src="css/img/logo.png" alt=""></h1>
             <span class="progress">20%</span>
         </div>
-        <div class="ribbon-blue"></div>
-        <div class="ribbon-red"></div>
-        <div class="ribbon-green"></div>
+        <div class="ribbon ribbon-blue"></div>
+        <div class="ribbon ribbon-red"></div>
+        <div class="ribbon ribbon-green"></div>
     </div>
     <!-- END LOADING PAGE -->
 
@@ -247,49 +260,49 @@
         $(".ribbon").css({height: ww*0.015})
         $(".intro-partie").css({width: ww, height: wh});
         $("#equipe .block-content .content-partie .intro-partie .col").css({
-            width: ww*0.39,
-            height: ww*0.429-10
+            width: ww*0.32,
+            height: ww*0.352-10
         });
         $("#equipe .block-content .content-partie .intro-partie .col#man-1").css({
-            marginLeft: -ww*0.128
+            marginLeft: -ww*0.11
         });
         $("#equipe .block-content .content-partie .intro-partie .col#man-2").css({
             left: ww*0.15
         });
         $("#equipe .block-content .content-partie .intro-partie .col#man-3").css({
-            left: ww*0.43
+            left: ww*0.4
         });
         $("#equipe .block-content .content-partie .intro-partie .col#man-4").css({
-            bottom: ww*0.132,
-            left: ww*0.06
+            bottom: ww*0.124,
+            left: ww*0.035
         });
         $("#equipe .block-content .content-partie .intro-partie .col#man-5").css({
-            bottom: ww*0.132,
-            left: ww*0.29
+            bottom: ww*0.124,
+            left: ww*0.26
         });
         $("#equipe .block-content .content-partie .intro-partie .col#man-6").css({
-            bottom: ww*0.132,
-            left: ww*0.6
+            bottom: ww*0.124,
+            left: ww*0.55
         });
         $(".click-fix-4").css({
             width: ww*0.13,
             height: ww*0.2,
-            bottom: ww*0.25,
-            left: ww*0.22
+            bottom: ww*0.22,
+            left: ww*0.18
         });
         $(".click-fix-5").css({
             width: ww*0.13,
             height: ww*0.2,
-            bottom: ww*0.25,
-            left: ww*0.48
+            bottom: ww*0.22,
+            left: ww*0.41
         });
         $(".click-fix-6").css({
             width: ww*0.13,
             height: ww*0.2,
-            bottom: ww*0.25,
-            left: ww*0.78
+            bottom: ww*0.22,
+            left: ww*0.68
         });
-        $(".bench").css({height: ww*0.16});
+        $(".bench").css({height: ww*0.124});
 
         $(".racket").css({
             width: ww*0.11
@@ -297,11 +310,17 @@
 
         /*detail-box*/
         $(".detail-box").css({
-            width: ww*0.3,
+            width: ww*0.24,
             height: ww*0.42,
             bottom: ww*0.05
         });
-        $(".detail-box img").css({
+        $(".detail-box.for_man-1, .detail-box.for_man-2, .detail-box.for_man-4").css({
+            marginRight: -ww*0.335
+        });
+        $(".detail-box.for_man-3, .detail-box.for_man-5, .detail-box.for_man-6").css({
+            marginLeft: -ww*0.47
+        });
+        $(".detail-box .pic").css({
             height: ww*0.4-89
         });
         $(".detail-box a").css({
@@ -386,6 +405,11 @@
 
     $(window).resize(function(){
         setContentSize();
+    });
+
+    /*loadding page*/
+    $(".loading-page").click(function(){
+        $(this).toggleClass("show");
     });
 </script>
 <!-- <script type="text/javascript" src="js/common.js"></script> -->

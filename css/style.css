@@ -200,6 +200,101 @@ button {
     color: #747474
 }
 
+/*---- loading-page  ----*/
+.loading-page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    z-index: 300;
+    background-image: url(img/bg_04.png);
+    background-repeat: repeat-x;
+    background-size: 1px 100%;
+    background-color: #fff;
+}
+.loading-page .inner {
+    position: absolute;
+    width: 22%;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%) scale(0.5);
+    transform: translate(-50%, -50%) scale(0.5);
+    -webkit-transition: all 1s ease-out 0;
+    transition: all 1s ease-out 0;
+}
+.loading-page.show .inner {
+    opacity: 1;
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1);
+}
+.loading-page .inner h1 {
+    margin-bottom: 15px;
+}
+.loading-page .inner h1 img {
+    width: 100%;
+    height: auto;
+}
+.loading-page .inner .progress {
+    font-size: 11px;
+    color: #005b30;
+}
+.loading-page .ribbon-blue {
+    display: block;
+    position: absolute;
+    width: 150%;
+    left: -12%;
+    top: 0;
+    background: #252c39;
+    z-index: 12;
+    -webkit-transform: rotate(45deg) translate(-150%, -150%);
+    transform: rotate(45deg) translate(-150%, -150%);
+    -webkit-transition: all 2s ease-out .3s;
+    transition: all 2s ease-out .3s;
+}
+.loading-page.show .ribbon-blue {
+    -webkit-transform: rotate(45deg) translate(0, 0);
+    transform: rotate(45deg) translate(0, 0);
+}
+.loading-page .ribbon-red {
+    display: block;
+    position: absolute;
+    width: 110%;
+    left: -30%;
+    top: 40%;
+    background: #cd2927;
+    z-index: 12;
+    -webkit-transform: rotate(-70deg) translate(-110%,-302%);
+    transform: rotate(-70deg) translate(-110%,-302%);
+    -webkit-transition: all 1s ease-out .6s;
+    transition: all 1s ease-out .6s;
+}
+.loading-page.show .ribbon-red {
+    -webkit-transform: rotate(-70deg) translate(0,0);
+    transform: rotate(-70deg) translate(0,0);
+}
+.loading-page .ribbon-green {
+    display: block;
+    position: absolute;
+    width: 120%;
+    left: -10%;
+    bottom: -12%;
+    background: #007354;
+    z-index: 10;
+    -webkit-transform: rotate(30deg) translate(-120%, -70%);
+    transform: rotate(30deg) translate(-120%, -70%);
+    -webkit-transition: all 1s ease-out .8s;
+    transition: all 1s ease-out .8s;
+}
+.loading-page.show .ribbon-green {
+    -webkit-transform: rotate(30deg) translate(0, 0);
+    transform: rotate(30deg) translate(0, 0);
+}
+
+
 /*---- main  ----*/
 .main {
     position: relative;
@@ -280,9 +375,9 @@ button {
 #flux-site .ribbon-blue {
     display: block;
     position: absolute;
-    width: 100%;
+    width: 120%;
     left: -10%;
-    top: 55%;
+    top: 60%;
     background: #252c39;
     z-index: 12;
     -webkit-transform: rotate(15deg);
@@ -497,12 +592,12 @@ button {
     -webkit-transition-timing-function: ease-out;
 }
 .detail-box.for_man-1, .detail-box.for_man-2, .detail-box.for_man-4 {
-    right: 5%;
+    right: 50%;
     -webkit-transform: translate(40px, 0);
     transform: translate(40px, 0);
 }
 .detail-box.for_man-3, .detail-box.for_man-5, .detail-box.for_man-6 {
-    left: 5%;
+    left: 50%;
     -webkit-transform: translate(-40px, 0);
     transform: translate(-40px, 0);
 }
@@ -517,11 +612,28 @@ button {
     font-size: 12px;
     margin-bottom: 20px;
 }
-.detail-box img {
+.detail-box .pic {
     display: block;
-    width: auto;
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto 15px auto;
+    font-size: 0;
+    background: #fff;
+    overflow: hidden;
+}
+.detail-box .pic:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+}
+.detail-box img {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: middle;
 }
 .detail-box span.price {
     display: block;
