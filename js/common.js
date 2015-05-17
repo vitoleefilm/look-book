@@ -96,7 +96,7 @@ $(document).ready(function() {
 			}
 		}
 		length = attr.length;
-		top_offset = -(length*size);
+		top_offset = -(length*size+5);
 		container.find('.anim-photo img').attr('style','top:'+top_offset+'');
 	}
 
@@ -153,4 +153,30 @@ $(document).ready(function() {
 			get_offset(index,container_attr[index]);
 		} 
 	});
+
+	// 后排可点击区域变大
+	$(".click-fix-4").on('touchstart',function(){
+        $(".detail-box").removeClass("show");
+        $(".col#man-4").siblings(".col").addClass("blur");
+        $(".col#man-4").siblings(".col").removeClass("active");
+        $(".col#man-4").removeClass("blur");
+        $(".col#man-4").addClass("active");
+        $(".detail-box.for_man-4").addClass("show");
+    });
+    $(".click-fix-5").on('touchstart',function(){
+        $(".detail-box").removeClass("show");
+        $(".col#man-5").siblings(".col").addClass("blur");
+        $(".col#man-5").siblings(".col").removeClass("active");
+        $(".col#man-5").removeClass("blur");
+        $(".col#man-5").addClass("active");
+        $(".detail-box.for_man-5").addClass("show");
+    });
+    $(".click-fix-6").on('touchstart',function(){
+        $(".detail-box").removeClass("show");
+        $(".col#man-6").siblings(".col").addClass("blur");
+        $(".col#man-6").siblings(".col").removeClass("active");
+        $(".col#man-6").removeClass("blur");
+        $(".col#man-6").addClass("active");
+        $(".detail-box.for_man-6").addClass("show");
+    });
 });
