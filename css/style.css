@@ -15,6 +15,7 @@ body {
     font-size: 16px;
     font-family: Tahoma, Arial, Helvetica, "微软雅黑", Sans-serif;
     color: #000;
+    overflow: hidden;
 }
 ul, li {
     list-style: none;
@@ -497,15 +498,15 @@ button {
 }
 #equipe .block-content .content-partie .intro-partie .col#man-1 {
     left: 0;
-    bottom: 0;
+    bottom: -5px;
     z-index: 100;
 }
 #equipe .block-content .content-partie .intro-partie .col#man-2 {
-    bottom: 0;
+    bottom: -5px;
     z-index: 90;
 }
 #equipe .block-content .content-partie .intro-partie .col#man-3 {
-    bottom: 0;
+    bottom: -5px;
     z-index: 80;
 }
 #equipe .block-content .content-partie .intro-partie .col#man-4 {
@@ -670,6 +671,54 @@ button {
     height: auto;
     background: none;
 }
+/*---- tc ----*/
+.tc {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    margin-left: 100%;
+    background: #fff;
+    overflow: hidden;
+    z-index: 1300;
+    -box-sizing: border-box;
+    -webkit-transition: -webkit-transform 1s ease-out;
+    transition: transform 1s ease-out;
+}
+.tc.show {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+.tc h4 {
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    color: #005b30;
+    text-align: center;
+}
+.tc .inner {
+    margin: 0 15px;
+    font-size: 12px;
+    line-height: 16px;
+    color: #717171;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.tc h5 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 18px;
+}
+.tc p {
+    margin-bottom: 10px;
+}
+.tc li {
+    margin-bottom: 10px;
+    padding-left: 15px;
+}
 /*---- Portrait box ----*/
 .portrait-box {
     display: block;
@@ -718,15 +767,18 @@ button {
     display: block;
     position: absolute;
     width: 100%;
-    height: 15px;
+    height: 50px;
     left: 0;
-    bottom: 10px;
+    bottom: 0;
     padding: 0 10px;
     font-size: 10px;
-    line-height: 15px;
+    line-height: 50px;
     box-sizing: border-box;
 }
 .portrait-box footer a {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
     color: #777;
 }
 .portrait-box footer a:last-child {
@@ -737,16 +789,25 @@ button {
     .portrait-box {
         display: none;
     }
+    .tc {
+        display: none;
+    }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) and (-webkit-min-device-pixel-ratio: 2) {
     .portrait-box {
         display: none;
     }
+    .tc {
+        display: none;
+    }
 }
 
 @media screen and (orientation:landscape) and (min-width:480px) and (max-width:960px) {
     .portrait-box {
+        display: none;
+    }
+    .tc {
         display: none;
     }
 }
