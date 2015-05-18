@@ -212,7 +212,7 @@
 
     <!-- LOADING PAGE -->
     <!-- 页面载入时loading-page淡入addClass=show 加载完成removeClass=show 两秒后淡出 -->
-    <div class="loading-page" style="">
+    <div class="loading-page" style="display:none">
         <div class="inner">
             <h1><img src="css/img/logo.png" alt=""></h1>
             <span class="progress">0%</span>
@@ -224,7 +224,7 @@
     <!-- END LOADING PAGE -->
 
     <!-- GAME GUIDE -->
-    <div class="game-guide show">
+    <div class="game-guide show" style="display:none">
         <div class="inner">
             <button class="close">关闭</button>
             <p>
@@ -482,6 +482,7 @@
     });
     $(".detail-box .close").click(function(){
         $(".detail-box").removeClass("show");
+        $(".main").removeClass("white");
         $("#equipe .block-content .content-partie .intro-partie .col").removeClass("active").removeClass("blur");
     });
 
@@ -541,7 +542,7 @@
         $(".tc").removeClass("show");
     });
 </script>
-<script type="text/javascript" src="js/common.js"></script>
+<!-- <script type="text/javascript" src="js/common.js"></script> -->
 </body>
 
 </html>
