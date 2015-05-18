@@ -32,30 +32,45 @@ $(document).ready(function() {
 	//判断手机横竖屏状态：  
     function get_orientation() {
         if(window.orientation == -90 || window.orientation == 90 || window.orientation == undefined){
+        	ww = window.innerWidth;
+        	wh = window.innerHeight;
+        	setContentSize();
         	// $('.loading-page').fadeIn(300,function() {
         		$('.loading-page').addClass('show');
         	// });
         	var k = 1;
+        	setTimeout(function() {
+        		if ($('.loading-page').hasClass('show') && !$('.loading-page').hasClass('fading')) {
+        			$('.loading-page').find('.progress').html('100%');
+        			$('.loading-page').removeClass('show');
+					$('.loading-page').fadeOut(3000,function() {
+						$('.loading-page').addClass('loaded');
+					});
+        		}
+        	},5000);
         	// 将图片属性放在标签中以免重复计算
             $('.col').each(function() {
 				var _this = $(this);
 				get_middle_line(_this,function() {
+					_this.find('.anim-photo img').attr('src',_this.find('.anim-photo img').attr('_src'));
+					_this.find('.anim-photo img').attr('style','top:-'+((ww*0.352)*12+7)+'');
 					_this.find('.anim-photo img').load(function() {
-						console.log(1);
 						var percent = (k*17);
 						if (percent == 102) {
 							percent = 100;
 						}
 						$('.loading-page').find('.progress').html(percent+'%');
 						k = k + 1;
-						$(this).attr('style','top:-'+((ww*0.352)*12+5)+'');
+						// $(this).attr('style','top:-'+((ww*0.352)*12+7)+'');
 						if (percent == 100) {
 							setTimeout(function() {
-								$('.loading-page').removeClass('show');
-								$('.loading-page').fadeOut(3000,function() {
-									// $(".game-guide").addClass('show');
-								});
-							},4000);
+								if ($('.loading-page').hasClass('show')) {
+									$('.loading-page').removeClass('show').addClass('fading');
+									$('.loading-page').fadeOut(3000,function() {
+										$('.loading-page').removeClass('fading');
+									});
+								}
+							},3000);
 						}
 					});
 				});
@@ -63,6 +78,7 @@ $(document).ready(function() {
         }
     }
     get_orientation();
+    window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", get_orientation, false);
 	
 	/**
 	 * 获得背景偏移量
@@ -157,7 +173,7 @@ $(document).ready(function() {
         $(this).addClass("active");
         _detail.addClass("show");
     });
-	$('#flux-site,#tennisball').on('touchmove',function(e) {
+	$('#flux-site,#tennisball,.click-fix-5,.click-fix-4,.click-fix-6').on('touchmove',function(e) {
 		e.preventDefault();
 		x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
         y = e.originalEvent.targetTouches[0].clientY.toFixed(2);
@@ -204,4 +220,7 @@ $(document).ready(function() {
         $(".col#man-6").addClass("active");
         $(".detail-box.for_man-6").addClass("show");
     });
+
+    //////////////////////////////微信分享////////////////////////////////////
+    // 定义微信分享的数据
 });
