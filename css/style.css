@@ -86,6 +86,7 @@ button {
     top: 5px;
     right: 5px;
     text-indent: -9999px;
+    z-index: 50;
 }
 .close:before {
     content: "";
