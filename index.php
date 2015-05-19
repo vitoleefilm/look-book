@@ -132,7 +132,7 @@ $signPackage = $jssdk->GetSignPackage();
                                             <img src="images/model/MAN6-5.png?v=<? echo date('ds',time())?>" alt="">
                                         </div>
                                         <div class="anim-photo">
-                                            <img id="jc" class="photo-viensla" _src="images/model/MAN6-1.png?v=<? echo date('ds',time())?>" alt="photo jc follomaton">
+                                            <img id="jc" class="photo-viensla" _src="images/model/MAN6-2.png?v=<? echo date('ds',time())?>" alt="photo jc follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -371,6 +371,8 @@ $signPackage = $jssdk->GetSignPackage();
     function setContentSize() {
         var ww = window.innerWidth;
         var wh = window.innerHeight;
+        // alert(ww);
+        // alert($(window).width());
 
         $("body").css({width: ww, height: wh});
 
@@ -435,8 +437,8 @@ $signPackage = $jssdk->GetSignPackage();
         /*detail-box*/
         $(".detail-box").css({
             width: ww*0.24,
-            height: ww*0.4,
-            bottom: ww*0.02
+            height: ww*0.33,
+            bottom: ww*0.015
         });
         $(".detail-box.for_man-1, .detail-box.for_man-2, .detail-box.for_man-4").css({
             marginRight: -ww*0.335
@@ -445,7 +447,7 @@ $signPackage = $jssdk->GetSignPackage();
             marginLeft: -ww*0.47
         });
         $(".detail-box .pic").css({
-            height: ww*0.4-89
+            height: ww*0.32-100
         });
         $(".detail-box a").css({
             height: ww*0.034,

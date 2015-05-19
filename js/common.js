@@ -66,11 +66,11 @@ $(document).ready(function() {
 							setTimeout(function() {
 								if ($('.loading-page').hasClass('show')) {
 									$('.loading-page').removeClass('show').addClass('fading');
-									$('.loading-page').fadeOut(3000,function() {
+									$('.loading-page').fadeOut(2000,function() {
 										$('.loading-page').removeClass('fading');
 									});
 								}
-							},3000);
+							},1000);
 						}
 					});
 				});
