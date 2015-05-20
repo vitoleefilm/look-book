@@ -162,19 +162,22 @@ $(document).ready(function() {
 	// });
 
 	// 各种点击事件和触摸事件
-	$("#equipe .block-content .content-partie .intro-partie .col").on('touchstart',function(e){
-		e.preventDefault();
-        var _id=$(this).attr('id');
-        var _detail = $('.detail-box.for_'+_id);
-        $(".main").addClass("white");
-        $(this).siblings(".col").addClass("blur");
-        $(this).siblings(".col").removeClass("active");
-        $(this).removeClass("blur");
-        $(this).addClass("active");
-        _detail.addClass("show");
-    });
+	// $("#equipe .block-content .content-partie .intro-partie .col").on('touchstart',function(e){
+	// 	e.preventDefault();
+ //        var _id=$(this).attr('id');
+ //        var _detail = $('.detail-box.for_'+_id);
+ //        $(".main").addClass("white");
+ //        $(this).siblings(".col").addClass("blur");
+ //        $(this).siblings(".col").removeClass("active");
+ //        $(this).removeClass("blur");
+ //        $(this).addClass("active");
+ //        _detail.addClass("show");
+ //    });
 	$('#flux-site,#tennisball,.click-fix-5,.click-fix-4,.click-fix-6').on('touchmove',function(e) {
 		e.preventDefault();
+		if ($('.main').hasClass('showing')) {
+			return;
+		}
 		x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
         y = e.originalEvent.targetTouches[0].clientY.toFixed(2);
 		$('#tennisball').css({'left':x-15,'top':y-15});
@@ -185,18 +188,50 @@ $(document).ready(function() {
 	$('.main').on('touchmove',function(e) {
 		e.preventDefault();
 	});
-	$('#flux-site').mousemove(function(e) {
-		e.preventDefault();
-		x = event.clientX;
-		y = event.clientY;
-		$('#tennisball').css({'left':x-15,'top':y-15});
-		for (index in container_attr) {
-			get_offset(index,container_attr[index]);
-		} 
-	});
+	// $('#flux-site').mousemove(function(e) {
+	// 	e.preventDefault();
+	// 	x = event.clientX;
+	// 	y = event.clientY;
+	// 	$('#tennisball').css({'left':x-15,'top':y-15});
+	// 	for (index in container_attr) {
+	// 		get_offset(index,container_attr[index]);
+	// 	} 
+	// });
 
-	// 后排可点击区域变大
-	$(".click-fix-4").on('touchstart',function(){
+////////////////////////////////////////////点击事件//////////////////////////////////////////////////
+ 	$(".game-guide .close").on('touchstart',function(){
+        $(".game-guide").removeClass("show");
+    });
+
+    /*Product Detail*/
+    $("#equipe .block-content .content-partie .intro-partie .col").on('touchstart',function(){
+    	if ($('.main').hasClass('showing')) {
+    		return;
+    	}
+    	$('.main').addClass('showing');
+
+        var _id=$(this).attr('id');
+        var _detail = $('.detail-box.for_'+_id);
+        $(".detail-box").removeClass("show");
+
+        $(this).siblings(".col").addClass("blur");
+        $(this).siblings(".col").removeClass("active");
+        $(this).removeClass("blur");
+        $(this).addClass("active");
+        _detail.addClass("show");
+    });
+    $(".detail-box .close").click(function(){
+        $(".detail-box").removeClass("show");
+        $(".main").removeClass("white showing");
+        $("#equipe .block-content .content-partie .intro-partie .col").removeClass("active").removeClass("blur");
+    });
+
+    $(".click-fix-4").on('touchstart',function(){
+    	if ($('.main').hasClass('showing')) {
+    		return;
+    	}
+    	$('.main').addClass('showing');
+
         $(".detail-box").removeClass("show");
         $(".col#man-4").siblings(".col").addClass("blur");
         $(".col#man-4").siblings(".col").removeClass("active");
@@ -205,6 +240,11 @@ $(document).ready(function() {
         $(".detail-box.for_man-4").addClass("show");
     });
     $(".click-fix-5").on('touchstart',function(){
+    	if ($('.main').hasClass('showing')) {
+    		return;
+    	}
+    	$('.main').addClass('showing');
+
         $(".detail-box").removeClass("show");
         $(".col#man-5").siblings(".col").addClass("blur");
         $(".col#man-5").siblings(".col").removeClass("active");
@@ -213,6 +253,11 @@ $(document).ready(function() {
         $(".detail-box.for_man-5").addClass("show");
     });
     $(".click-fix-6").on('touchstart',function(){
+    	if ($('.main').hasClass('showing')) {
+    		return;
+    	}
+    	$('.main').addClass('showing');
+
         $(".detail-box").removeClass("show");
         $(".col#man-6").siblings(".col").addClass("blur");
         $(".col#man-6").siblings(".col").removeClass("active");
@@ -221,6 +266,34 @@ $(document).ready(function() {
         $(".detail-box.for_man-6").addClass("show");
     });
 
-    //////////////////////////////微信分享////////////////////////////////////
-    // 定义微信分享的数据
+    /*menu*/
+    $(".menu-button").click(function(){
+        if(!$(this).hasClass("in")){
+            $(this).addClass("in");
+            $(".menu").addClass("show");
+            $(".main-mask").addClass("show");
+        } else {
+            $(this).removeClass("in");
+            $(".menu").removeClass("show");
+            $(".main-mask").removeClass("show");
+        }
+    });
+    $(".main-mask").click(function(){
+        $(this).removeClass("show");
+        $(".menu-button").removeClass("in");
+        $(".menu").removeClass("show");
+    });
+
+    /*loadding page*/
+    // $(".loading-page").click(function(){
+    //     $(this).toggleClass("show");
+    // });
+
+    /*tc*/
+    $(".read-tc").click(function(){
+        $(".tc").addClass("show");
+    });
+    $(".tc .close").click(function(){
+        $(".tc").removeClass("show");
+    });
 });

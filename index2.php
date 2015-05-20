@@ -67,7 +67,7 @@ $signPackage = $jssdk->GetSignPackage();
                                             <img src="images/model/MAN1-5.png?v=<? echo date('ds',time())?>" alt="">
                                         </div>
                                         <div class="anim-photo">
-                                            <img id="jc" class="photo-viensla" _src="images/model/MAN1-2.png?v=<? echo date('ds',time())?>" alt="photo jc follomaton">
+                                            <img id="jc" class="photo-viensla" _src="images/model/MAN1-1.png?v=<? echo date('ds',time())?>" alt="photo jc follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -80,7 +80,7 @@ $signPackage = $jssdk->GetSignPackage();
                                             <img src="images/model/MAN2-5.png?v=<? echo date('ds',time())?>" alt="">
                                         </div>
                                         <div class="anim-photo">
-                                            <img id="niko" class="photo-viensla" _src="images/model/MAN2-2.png?v=<? echo date('ds',time())?>" alt="photo nico follomaton">
+                                            <img id="niko" class="photo-viensla" _src="images/model/MAN2-1.png?v=<? echo date('ds',time())?>" alt="photo nico follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -93,7 +93,7 @@ $signPackage = $jssdk->GetSignPackage();
                                             <img src="images/model/MAN3-5.png?v=<? echo date('ds',time())?>" alt="">
                                         </div>
                                         <div class="anim-photo">
-                                            <img id="fred" class="photo-viensla" _src="images/model/MAN3-2.png?v=<? echo date('ds',time())?>" alt="photo fred follomaton">
+                                            <img id="fred" class="photo-viensla" _src="images/model/MAN3-1.png?v=<? echo date('ds',time())?>" alt="photo fred follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -106,7 +106,7 @@ $signPackage = $jssdk->GetSignPackage();
                                             <img src="images/model/MAN4-5.png?v=<? echo date('ds',time())?>" alt="">
                                         </div>
                                         <div class="anim-photo">
-                                            <img id="fred" class="photo-viensla" _src="images/model/MAN4-2.png?v=<? echo date('ds',time())?>" alt="photo fred follomaton">
+                                            <img id="fred" class="photo-viensla" _src="images/model/MAN4-1.png?v=<? echo date('ds',time())?>" alt="photo fred follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -119,7 +119,7 @@ $signPackage = $jssdk->GetSignPackage();
                                             <img src="images/model/MAN5-5.png?v=<? echo date('ds',time())?>" alt="">
                                         </div>
                                         <div class="anim-photo">
-                                            <img id="niko" class="photo-viensla" _src="images/model/MAN5-2.png?v=<? echo date('ds',time())?>" alt="photo nico follomaton">
+                                            <img id="niko" class="photo-viensla" _src="images/model/MAN5-1.png?v=<? echo date('ds',time())?>" alt="photo nico follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -371,6 +371,8 @@ $signPackage = $jssdk->GetSignPackage();
     function setContentSize() {
         var ww = window.innerWidth;
         var wh = window.innerHeight;
+        // alert(ww);
+        // alert($(window).width());
 
         $("body").css({width: ww, height: wh});
 
