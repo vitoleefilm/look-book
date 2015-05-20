@@ -649,6 +649,11 @@ button {
     -webkit-transform: translate(-40px, 0);
     transform: translate(-40px, 0);
 }
+.detail-box.for_racket {
+    right: 30%;
+    -webkit-transform: translate(-40px, 0);
+    transform: translate(-40px, 0);
+}
 .detail-box.show {
     opacity: 1;
     z-index: 240;
@@ -700,7 +705,6 @@ button {
     position: absolute;
     bottom: 0;
     right: 20px;
-    pointer-events: none;
     z-index: 170;
 }
 .racket img {
