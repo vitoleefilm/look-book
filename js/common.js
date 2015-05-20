@@ -265,17 +265,6 @@ $(document).ready(function() {
         $(".col#man-6").addClass("active");
         $(".detail-box.for_man-6").addClass("show");
     });
-    $(".racket").on('touchstart',function(){
-    	if ($('.main').hasClass('showing')) {
-    		return;
-    	}
-    	$('.main').addClass('showing');
-
-        $(".detail-box").removeClass("show");
-        $(".col").addClass("blur");
-        $(".col").removeClass("active");
-        $(".detail-box.for_racket").addClass("show");
-    });
 
     /*menu*/
     $(".menu-button").click(function(){
