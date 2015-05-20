@@ -550,6 +550,21 @@ button {
     position: absolute;
     z-index: 120;
 }
+.click-mask-1, .click-mask-2, 
+.click-mask-3, .click-mask-4, 
+.click-mask-5, .click-mask-6,
+.click-mask-7, .click-mask-8 {
+    display: block;
+    position: absolute;
+    z-index: 121;
+}
+/*.click-mask-1, .click-mask-3, .click-mask-5, .click-mask-7 {
+    background: rgba(0,0,0,0.5);
+}
+.click-mask-2, .click-mask-4, .click-mask-6, .click-mask-8 {
+    background: #999;
+    opacity: .5;
+}*/
 #equipe .block-content .content-partie .intro-partie .cadre-photo {
     position: relative;
     width: 100%;

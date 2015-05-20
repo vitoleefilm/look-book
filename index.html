@@ -135,6 +135,14 @@
                                 <div class="click-fix-4"></div>
                                 <div class="click-fix-5"></div>
                                 <div class="click-fix-6"></div>
+                                <div class="click-mask-1"></div>
+                                <div class="click-mask-2"></div>
+                                <div class="click-mask-3"></div>
+                                <div class="click-mask-4"></div>
+                                <div class="click-mask-5"></div>
+                                <div class="click-mask-6"></div>
+                                <div class="click-mask-7"></div>
+                                <div class="click-mask-8"></div>
                                 <div class="bench"></div>
                                 <div class="ground"><img src="css/img/ground.png" alt=""></div>
                             </div>
@@ -422,6 +430,54 @@
             bottom: ww*0.22,
             left: ww*0.68
         });
+        $(".click-mask-1").css({
+            width: ww*0.08,
+            height: ww*0.2,
+            bottom: ww*0.22,
+            left: 0
+        });
+        $(".click-mask-2").css({
+            width: ww*0.14,
+            height: ww*0.2,
+            bottom: ww*0.33,
+            left: ww*0.08
+        });
+        $(".click-mask-3").css({
+            width: ww*0.15,
+            height: ww*0.2,
+            bottom: ww*0.33,
+            left: ww*0.28
+        });
+        $(".click-mask-4").css({
+            width: ww*0.7,
+            height: ww*0.1,
+            bottom: ww*0.42,
+            left: ww*0.18
+        });
+        $(".click-mask-5").css({
+            width: ww*0.21,
+            height: ww*0.2,
+            bottom: ww*0.33,
+            left: ww*0.5
+        });
+        $(".click-mask-6").css({
+            width: ww*0.22,
+            height: ww*0.2,
+            bottom: ww*0.33,
+            right: 0
+        });
+        $(".click-mask-7").css({
+            width: ww*0.07,
+            height: ww*0.1,
+            bottom: 0,
+            left: ww*0.2
+        });
+        $(".click-mask-8").css({
+            width: ww*0.06,
+            height: ww*0.1,
+            bottom: 0,
+            left: ww*0.46
+        });
         $(".bench").css({height: ww*0.124});
 
         $(".racket").css({
@@ -461,86 +517,7 @@
         setContentSize();
     }).resize();
 
-    /*game guide*/
-    // setTimeout(function(){
-    //     $(".game-guide").addClass("show");
-    // },500);
-    $(".game-guide .close").click(function(){
-        $(".game-guide").removeClass("show");
-    });
 
-    /*Product Detail*/
-    $("#equipe .block-content .content-partie .intro-partie .col").click(function(){
-        var _id=$(this).attr('id');
-        var _detail = $('.detail-box.for_'+_id);
-        $(".detail-box").removeClass("show");
-        $(this).siblings(".col").addClass("blur");
-        $(this).siblings(".col").removeClass("active");
-        $(this).removeClass("blur");
-        $(this).addClass("active");
-        _detail.addClass("show");
-    });
-    $(".detail-box .close").click(function(){
-        $(".detail-box").removeClass("show");
-        $(".main").removeClass("white");
-        $("#equipe .block-content .content-partie .intro-partie .col").removeClass("active").removeClass("blur");
-    });
-
-    $(".click-fix-4").click(function(){
-        $(".detail-box").removeClass("show");
-        $(".col#man-4").siblings(".col").addClass("blur");
-        $(".col#man-4").siblings(".col").removeClass("active");
-        $(".col#man-4").removeClass("blur");
-        $(".col#man-4").addClass("active");
-        $(".detail-box.for_man-4").addClass("show");
-    });
-    $(".click-fix-5").click(function(){
-        $(".detail-box").removeClass("show");
-        $(".col#man-5").siblings(".col").addClass("blur");
-        $(".col#man-5").siblings(".col").removeClass("active");
-        $(".col#man-5").removeClass("blur");
-        $(".col#man-5").addClass("active");
-        $(".detail-box.for_man-5").addClass("show");
-    });
-    $(".click-fix-6").click(function(){
-        $(".detail-box").removeClass("show");
-        $(".col#man-6").siblings(".col").addClass("blur");
-        $(".col#man-6").siblings(".col").removeClass("active");
-        $(".col#man-6").removeClass("blur");
-        $(".col#man-6").addClass("active");
-        $(".detail-box.for_man-6").addClass("show");
-    });
-
-    /*menu*/
-    $(".menu-button").click(function(){
-        if(!$(this).hasClass("in")){
-            $(this).addClass("in");
-            $(".menu").addClass("show");
-            $(".main-mask").addClass("show");
-        } else {
-            $(this).removeClass("in");
-            $(".menu").removeClass("show");
-            $(".main-mask").removeClass("show");
-        }
-    });
-    $(".main-mask").click(function(){
-        $(this).removeClass("show");
-        $(".menu-button").removeClass("in");
-        $(".menu").removeClass("show");
-    });
-
-    /*loadding page*/
-    // $(".loading-page").click(function(){
-    //     $(this).toggleClass("show");
-    // });
-
-    /*tc*/
-    $(".read-tc").click(function(){
-        $(".tc").addClass("show");
-    });
-    $(".tc .close").click(function(){
-        $(".tc").removeClass("show");
-    });
 </script>
 <script type="text/javascript" src="js/common.js"></script>
 </body>
