@@ -131,6 +131,8 @@ button {
     background: #b8b8b8;
     text-indent: -9999px;
     z-index: 10;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
 }
 .menu-button span:before {
     content: "";
@@ -142,6 +144,8 @@ button {
     top: -8px;
     background: #b8b8b8;
     z-index: 20;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
 }
 .menu-button span:after {
     content: "";
@@ -153,6 +157,20 @@ button {
     bottom: -8px;
     background: #b8b8b8;
     z-index: 20;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+}
+.menu-button.in span:before {
+    top: 0;
+}
+.menu-button.in span:after {
+    bottom: 0;
+}
+.menu-button.in span, 
+.menu-button.in span:before, 
+.menu-button.in span:after {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
 }
 .menu {
     display: block;
@@ -420,6 +438,10 @@ button {
 .main-mask.show {
     visibility: visible;
     opacity: 1;
+}
+#tennisball {
+    bottom: 25px;
+    right: 15%;
 }
 .bench {
     position: absolute;
