@@ -61,78 +61,96 @@ $signPackage = $jssdk->GetSignPackage();
                                 <div _index="0" class="col" id="man-1">
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
-                                            <img src="images/model/MAN1-3.png?v=<? echo date('ds',time())?>" alt="photo jc nb">
+
+                                            <img src="images/model/MAN1-3x2.png" srcset="images/model/MAN1-3.png 500w, images/model/MAN1-3x2.png 1000w" alt="photo jc nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
-                                            <img src="images/model/MAN1-5.png?v=<? echo date('ds',time())?>" alt="">
+
+                                            <img src="images/model/MAN1-5x2.png" srcset="images/model/MAN1-5.png 500w, images/model/MAN1-5x2.png 1000w" alt="">
                                         </div>
                                         <div class="anim-photo">
-                                            <img id="jc" class="photo-viensla" _src="images/model/MAN1-1.png?v=<? echo date('ds',time())?>" alt="photo jc follomaton">
+
+                                            <img id="jc" class="photo-viensla" _src="images/model/MAN1-1x2.png" srcset="images/model/MAN1-1.png 500w, images/model/MAN1-1x2.png 1000w" alt="photo jc follomaton">
                                         </div>
                                     </div>
                                 </div>
                                 <div _index="1" class="col" id="man-2">
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
-                                            <img src="images/model/MAN2-3.png?v=<? echo date('ds',time())?>" alt="photo nico nb">
+
+                                            <img src="images/model/MAN2-3x2.png" srcset="images/model/MAN2-3.png 500w, images/model/MAN2-3x2.png 1000w" alt="photo nico nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
-                                            <img src="images/model/MAN2-5.png?v=<? echo date('ds',time())?>" alt="">
+
+                                            <img src="images/model/MAN2-5x2.png" srcset="images/model/MAN2-5.png 500w, images/model/MAN2-5x2.png 1000w" alt="">
                                         </div>
                                         <div class="anim-photo">
-                                            <img id="niko" class="photo-viensla" _src="images/model/MAN2-1.png?v=<? echo date('ds',time())?>" alt="photo nico follomaton">
+
+                                            <img id="niko" class="photo-viensla" _src="images/model/MAN2-1x2.png" srcset="images/model/MAN2-1.png 500w, images/model/MAN2-1x2.png 1000w" alt="photo nico follomaton">
                                         </div>
                                     </div>
                                 </div>
                                 <div _index="2" class="col" id="man-3">
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
-                                            <img src="images/model/MAN3-3.png?v=<? echo date('ds',time())?>" alt="photo fred nb">
+
+                                            <img src="images/model/MAN3-3x2.png" srcset="images/model/MAN3-3.png 500w, images/model/MAN3-3x2.png 1000w" alt="photo fred nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
-                                            <img src="images/model/MAN3-5.png?v=<? echo date('ds',time())?>" alt="">
+
+                                            <img src="images/model/MAN3-5x2.png" srcset="images/model/MAN3-5.png 500w, images/model/MAN3-5x2.png 1000w" alt="">
                                         </div>
                                         <div class="anim-photo">
-                                            <img id="fred" class="photo-viensla" _src="images/model/MAN3-1.png?v=<? echo date('ds',time())?>" alt="photo fred follomaton">
+
+                                            <img id="fred" class="photo-viensla" _src="images/model/MAN3-1x2.png" srcset="images/model/MAN3-1.png 500w, images/model/MAN3-1x2.png 1000w" alt="photo fred follomaton">
                                         </div>
                                     </div>
                                 </div>
                                 <div _index="3" class="col" id="man-4">
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
-                                            <img src="images/model/MAN4-3.png?v=<? echo date('ds',time())?>" alt="photo fred nb">
+
+                                            <img src="images/model/MAN4-3x2.png" srcset="images/model/MAN4-3.png 500w, images/model/MAN4-3x2.png 1000w" alt="photo fred nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
-                                            <img src="images/model/MAN4-5.png?v=<? echo date('ds',time())?>" alt="">
+
+                                            <img src="images/model/MAN4-5x2.png" srcset="images/model/MAN4-5.png 500w, images/model/MAN4-5x2.png 1000w" alt="">
                                         </div>
                                         <div class="anim-photo">
-                                            <img id="fred" class="photo-viensla" _src="images/model/MAN4-1.png?v=<? echo date('ds',time())?>" alt="photo fred follomaton">
+
+                                            <img id="fred" class="photo-viensla" _src="images/model/MAN4-1x2.png" srcset="images/model/MAN4-1.png 500w, images/model/MAN4-1x2.png 1000w" alt="photo fred follomaton">
                                         </div>
                                     </div>
                                 </div>
                                 <div _index="4" class="col" id="man-5">
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
-                                            <img src="images/model/MAN5-3.png?v=<? echo date('ds',time())?>" alt="photo nico nb">
+
+                                            <img src="images/model/MAN5-3x2.png" srcset="images/model/MAN5-3.png 500w, images/model/MAN5-3x2.png 1000w" alt="photo nico nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
-                                            <img src="images/model/MAN5-5.png?v=<? echo date('ds',time())?>" alt="">
+
+                                            <img src="images/model/MAN5-5x2.png" srcset="images/model/MAN5-5.png 500w, images/model/MAN5-5x2.png 1000w" alt="">
                                         </div>
                                         <div class="anim-photo">
-                                            <img id="niko" class="photo-viensla" _src="images/model/MAN5-1.png?v=<? echo date('ds',time())?>" alt="photo nico follomaton">
+
+                                            <img id="niko" class="photo-viensla" _src="images/model/MAN5-1x2.png" srcset="images/model/MAN5-1.png 500w, images/model/MAN5-1x2.png 1000w" alt="photo nico follomaton">
                                         </div>
                                     </div>
                                 </div>
                                 <div _index="5" class="col" id="man-6">
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
-                                            <img src="images/model/MAN6-3.png?v=<? echo date('ds',time())?>" alt="photo jc nb">
+
+                                            <img src="images/model/MAN6-3x2.png" srcset="images/model/MAN6-3.png 500w, images/model/MAN6-3x2.png 1000w" alt="photo jc nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
-                                            <img src="images/model/MAN6-5.png?v=<? echo date('ds',time())?>" alt="">
+
+                                            <img src="images/model/MAN6-5x2.png" srcset="images/model/MAN6-5.png 500w, images/model/MAN6-5x2.png 1000w" alt="">
                                         </div>
                                         <div class="anim-photo">
-                                            <img id="jc" class="photo-viensla" _src="images/model/MAN6-2.png?v=<? echo date('ds',time())?>" alt="photo jc follomaton">
+
+                                            <img id="jc" class="photo-viensla" _src="images/model/MAN6-1x2.png" srcset="images/model/MAN6-1.png 500w, images/model/MAN6-1x2.png 1000w" alt="photo jc follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -140,7 +158,7 @@ $signPackage = $jssdk->GetSignPackage();
                                 <div class="click-fix-5"></div>
                                 <div class="click-fix-6"></div>
                                 <div class="bench"></div>
-                                <div class="ground"><img src="css/img/ground.png?v=<? echo date('ds',time())?>" alt=""></div>
+                                <div class="ground"><img src="css/img/ground.png" alt=""></div>
                             </div>
                         </div>
                     </div>
