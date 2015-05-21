@@ -131,6 +131,8 @@ button {
     background: #b8b8b8;
     text-indent: -9999px;
     z-index: 10;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
 }
@@ -144,6 +146,8 @@ button {
     top: -8px;
     background: #b8b8b8;
     z-index: 20;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
 }
@@ -157,6 +161,8 @@ button {
     bottom: -8px;
     background: #b8b8b8;
     z-index: 20;
+    -webkit-border-radius: 1px;
+    border-radius: 1px;
     -webkit-transition: all .3s ease-out;
     transition: all .3s ease-out;
 }
@@ -217,7 +223,25 @@ button {
     padding-left: 20px;
     line-height: 40px;
     font-size: 13px;
-    color: #747474
+    color: #747474;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+.menu ul li a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+.menu ul li a.red:hover {
+    background: #cd2927;
+}
+.menu ul li a.green:hover {
+    background: #007354;
+}
+.menu ul li a.blue:hover {
+    background: #242c39;
+}
+.menu ul li a.grey:hover {
+    background: #777777;
 }
 
 /*---- loading-page  ----*/
