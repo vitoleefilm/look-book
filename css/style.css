@@ -188,8 +188,8 @@ button {
     margin-left: -220px;
     background: #fff;
     z-index: 2000;
-    -webkit-transition: all .5s ease-out;
-    transition: all .5s ease-out;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
 }
 .menu.show {
     -webkit-transform: translateX(220px);
@@ -456,8 +456,8 @@ button {
     visibility: hidden;
     opacity: 0;
     z-index: 1500;
-    -webkit-transition: all .5s ease-out;
-    transition: all .5s ease-out;
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
 }
 .main-mask.show {
     visibility: visible;
@@ -611,7 +611,7 @@ button {
     position: relative;
     width: 100%;
     height: auto;
-    top: -3px;
+    top: 0;
 }
 #equipe .block-content .content-partie .intro-partie .anim-photo {
     position: absolute;
