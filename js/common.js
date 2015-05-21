@@ -47,7 +47,7 @@ $(document).ready(function() {
 						$('.loading-page').addClass('loaded');
 					});
         		}
-        	},5000);
+        	},3000);
         	// 将图片属性放在标签中以免重复计算
             $('.col').each(function() {
 				var _this = $(this);
@@ -173,7 +173,8 @@ $(document).ready(function() {
  //        $(this).addClass("active");
  //        _detail.addClass("show");
  //    });
-	$('#flux-site,#tennisball,.click-fix-5,.click-fix-4,.click-fix-6').on('touchmove',function(e) {
+	// $('#flux-site,#tennisball,.click-fix-5,.click-fix-4,.click-fix-6').on('touchmove',function(e) {
+	$('#tennisball').on('touchmove',function(e) {
 		e.preventDefault();
 		if ($('.main').hasClass('showing')) {
 			return;
@@ -205,9 +206,9 @@ $(document).ready(function() {
 
     /*Product Detail*/
     $("#equipe .block-content .content-partie .intro-partie .col").on('touchstart',function(){
-    	if ($('.main').hasClass('showing')) {
-    		return;
-    	}
+    	// if ($('.main').hasClass('showing')) {
+    	// 	return;
+    	// }
     	$('.main').addClass('showing');
 
         var _id=$(this).attr('id');
@@ -227,9 +228,9 @@ $(document).ready(function() {
     });
 
     $(".click-fix-4").on('touchstart',function(){
-    	if ($('.main').hasClass('showing')) {
-    		return;
-    	}
+    	// if ($('.main').hasClass('showing')) {
+    	// 	return;
+    	// }
     	$('.main').addClass('showing');
 
         $(".detail-box").removeClass("show");
@@ -240,9 +241,9 @@ $(document).ready(function() {
         $(".detail-box.for_man-4").addClass("show");
     });
     $(".click-fix-5").on('touchstart',function(){
-    	if ($('.main').hasClass('showing')) {
-    		return;
-    	}
+    	// if ($('.main').hasClass('showing')) {
+    	// 	return;
+    	// }
     	$('.main').addClass('showing');
 
         $(".detail-box").removeClass("show");
@@ -253,9 +254,9 @@ $(document).ready(function() {
         $(".detail-box.for_man-5").addClass("show");
     });
     $(".click-fix-6").on('touchstart',function(){
-    	if ($('.main').hasClass('showing')) {
-    		return;
-    	}
+    	// if ($('.main').hasClass('showing')) {
+    	// 	return;
+    	// }
     	$('.main').addClass('showing');
 
         $(".detail-box").removeClass("show");
@@ -264,6 +265,18 @@ $(document).ready(function() {
         $(".col#man-6").removeClass("blur");
         $(".col#man-6").addClass("active");
         $(".detail-box.for_man-6").addClass("show");
+    });
+
+    $(".racket").on('touchstart',function(){
+        // if ($('.main').hasClass('showing')) {
+        //     return;
+        // }
+        $('.main').addClass('showing');
+
+        $(".detail-box").removeClass("show");
+        $(".col").addClass("blur");
+        $(".col").removeClass("active");
+        $(".detail-box.for_racket").addClass("show");
     });
 
     /*menu*/

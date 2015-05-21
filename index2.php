@@ -62,15 +62,15 @@ $signPackage = $jssdk->GetSignPackage();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN1-3x2.png" srcset="images/model/MAN1-3.png 500w, images/model/MAN1-3x2.png 1000w" alt="photo jc nb">
+                                            <img src="images/model/MAN1-4x2.png" srcset="images/model/MAN1-4.png 500w, images/model/MAN1-4x2.png 1000w" alt="photo jc nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN1-5x2.png" srcset="images/model/MAN1-5.png 500w, images/model/MAN1-5x2.png 1000w" alt="">
+                                            <img src="images/model/MAN1-6x2.png" srcset="images/model/MAN1-6.png 500w, images/model/MAN1-6x2.png 1000w" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="jc" class="photo-viensla" _src="images/model/MAN1-1x2.png" srcset="images/model/MAN1-1.png 500w, images/model/MAN1-1x2.png 1000w" alt="photo jc follomaton">
+                                            <img id="jc" class="photo-viensla" _src="images/model/MAN1-2x2.png" srcset="images/model/MAN1-2.png 500w, images/model/MAN1-2x2.png 1000w" alt="photo jc follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -78,15 +78,15 @@ $signPackage = $jssdk->GetSignPackage();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN2-3x2.png" srcset="images/model/MAN2-3.png 500w, images/model/MAN2-3x2.png 1000w" alt="photo nico nb">
+                                            <img src="images/model/MAN2-4x2.png" srcset="images/model/MAN2-4.png 500w, images/model/MAN2-4x2.png 1000w" alt="photo nico nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN2-5x2.png" srcset="images/model/MAN2-5.png 500w, images/model/MAN2-5x2.png 1000w" alt="">
+                                            <img src="images/model/MAN2-6x2.png" srcset="images/model/MAN2-6.png 500w, images/model/MAN2-6x2.png 1000w" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="niko" class="photo-viensla" _src="images/model/MAN2-1x2.png" srcset="images/model/MAN2-1.png 500w, images/model/MAN2-1x2.png 1000w" alt="photo nico follomaton">
+                                            <img id="niko" class="photo-viensla" _src="images/model/MAN2-2x2.png" srcset="images/model/MAN2-2.png 500w, images/model/MAN2-2x2.png 1000w" alt="photo nico follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -94,15 +94,15 @@ $signPackage = $jssdk->GetSignPackage();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN3-3x2.png" srcset="images/model/MAN3-3.png 500w, images/model/MAN3-3x2.png 1000w" alt="photo fred nb">
+                                            <img src="images/model/MAN3-4x2.png" srcset="images/model/MAN3-4.png 500w, images/model/MAN3-4x2.png 1000w" alt="photo fred nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN3-5x2.png" srcset="images/model/MAN3-5.png 500w, images/model/MAN3-5x2.png 1000w" alt="">
+                                            <img src="images/model/MAN3-6x2.png" srcset="images/model/MAN3-6.png 500w, images/model/MAN3-6x2.png 1000w" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="fred" class="photo-viensla" _src="images/model/MAN3-1x2.png" srcset="images/model/MAN3-1.png 500w, images/model/MAN3-1x2.png 1000w" alt="photo fred follomaton">
+                                            <img id="fred" class="photo-viensla" _src="images/model/MAN3-2x2.png" srcset="images/model/MAN3-2.png 500w, images/model/MAN3-2x2.png 1000w" alt="photo fred follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -110,15 +110,15 @@ $signPackage = $jssdk->GetSignPackage();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN4-3x2.png" srcset="images/model/MAN4-3.png 500w, images/model/MAN4-3x2.png 1000w" alt="photo fred nb">
+                                            <img src="images/model/MAN4-4x2.png" srcset="images/model/MAN4-4.png 500w, images/model/MAN4-4x2.png 1000w" alt="photo fred nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN4-5x2.png" srcset="images/model/MAN4-5.png 500w, images/model/MAN4-5x2.png 1000w" alt="">
+                                            <img src="images/model/MAN4-6x2.png" srcset="images/model/MAN4-6.png 500w, images/model/MAN4-6x2.png 1000w" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="fred" class="photo-viensla" _src="images/model/MAN4-1x2.png" srcset="images/model/MAN4-1.png 500w, images/model/MAN4-1x2.png 1000w" alt="photo fred follomaton">
+                                            <img id="fred" class="photo-viensla" _src="images/model/MAN4-2x2.png" srcset="images/model/MAN4-2.png 500w, images/model/MAN4-2x2.png 1000w" alt="photo fred follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -126,15 +126,15 @@ $signPackage = $jssdk->GetSignPackage();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN5-3x2.png" srcset="images/model/MAN5-3.png 500w, images/model/MAN5-3x2.png 1000w" alt="photo nico nb">
+                                            <img src="images/model/MAN5-4x2.png" srcset="images/model/MAN5-4.png 500w, images/model/MAN5-4x2.png 1000w" alt="photo nico nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN5-5x2.png" srcset="images/model/MAN5-5.png 500w, images/model/MAN5-5x2.png 1000w" alt="">
+                                            <img src="images/model/MAN5-6x2.png" srcset="images/model/MAN5-6.png 500w, images/model/MAN5-6x2.png 1000w" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="niko" class="photo-viensla" _src="images/model/MAN5-1x2.png" srcset="images/model/MAN5-1.png 500w, images/model/MAN5-1x2.png 1000w" alt="photo nico follomaton">
+                                            <img id="niko" class="photo-viensla" _src="images/model/MAN5-2x2.png" srcset="images/model/MAN5-2.png 500w, images/model/MAN5-2x2.png 1000w" alt="photo nico follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -142,21 +142,29 @@ $signPackage = $jssdk->GetSignPackage();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN6-3x2.png" srcset="images/model/MAN6-3.png 500w, images/model/MAN6-3x2.png 1000w" alt="photo jc nb">
+                                            <img src="images/model/MAN6-4x2.png" srcset="images/model/MAN6-4.png 500w, images/model/MAN6-4x2.png 1000w" alt="photo jc nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN6-5x2.png" srcset="images/model/MAN6-5.png 500w, images/model/MAN6-5x2.png 1000w" alt="">
+                                            <img src="images/model/MAN6-6x2.png" srcset="images/model/MAN6-6.png 500w, images/model/MAN6-6x2.png 1000w" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="jc" class="photo-viensla" _src="images/model/MAN6-1x2.png" srcset="images/model/MAN6-1.png 500w, images/model/MAN6-1x2.png 1000w" alt="photo jc follomaton">
+                                            <img id="jc" class="photo-viensla" _src="images/model/MAN6-2x2.png" srcset="images/model/MAN6-2.png 500w, images/model/MAN6-2x2.png 1000w" alt="photo jc follomaton">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="click-fix-4"></div>
                                 <div class="click-fix-5"></div>
                                 <div class="click-fix-6"></div>
+                                <div class="click-mask-1"></div>
+                                <div class="click-mask-2"></div>
+                                <div class="click-mask-3"></div>
+                                <div class="click-mask-4"></div>
+                                <div class="click-mask-5"></div>
+                                <div class="click-mask-6"></div>
+                                <div class="click-mask-7"></div>
+                                <div class="click-mask-8"></div>
                                 <div class="bench"></div>
                                 <div class="ground"><img src="css/img/ground.png" alt=""></div>
                             </div>
@@ -191,7 +199,7 @@ $signPackage = $jssdk->GetSignPackage();
             <img src="images/product/02.png?v=<? echo date('ds',time())?>" alt="">
         </div>
         <span class="price">价格：990 元</span>
-        <a target="_blank" href="http://item.jd.com/1543281789.html">立即购买</a>
+        <a target="_blank" href="http://item.jd.com/1543281789.html">已售罄</a>
     </div>
     <div class="detail-box for_man-3">
         <button class="close">关闭</button>
@@ -228,6 +236,15 @@ $signPackage = $jssdk->GetSignPackage();
         </div>
         <span class="price">价格：990 元</span>
         <a target="_blank" href="http://item.jd.com/1543274075.html">立即购买</a>
+    </div>
+    <div class="detail-box for_racket">
+        <button class="close">关闭</button>
+        <h3>LT12限量系列网球拍</h3>
+        <div class="pic">
+            <img src="images/product/07.png" alt="">
+        </div>
+        <span class="price">价格：4990 元</span>
+        <a target="_blank" href="http://item.jd.com/1543287724.html">立即购买</a>
     </div>
     <!-- PRODUCT DETAIL -->
     <!-- PRODUCT DETAIL END -->
@@ -445,6 +462,54 @@ $signPackage = $jssdk->GetSignPackage();
             height: ww*0.2,
             bottom: ww*0.22,
             left: ww*0.68
+        });
+        $(".click-mask-1").css({
+            width: ww*0.08,
+            height: ww*0.2,
+            bottom: ww*0.22,
+            left: 0
+        });
+        $(".click-mask-2").css({
+            width: ww*0.14,
+            height: ww*0.2,
+            bottom: ww*0.33,
+            left: ww*0.08
+        });
+        $(".click-mask-3").css({
+            width: ww*0.15,
+            height: ww*0.2,
+            bottom: ww*0.33,
+            left: ww*0.28
+        });
+        $(".click-mask-4").css({
+            width: ww*0.7,
+            height: ww*0.1,
+            bottom: ww*0.42,
+            left: ww*0.18
+        });
+        $(".click-mask-5").css({
+            width: ww*0.21,
+            height: ww*0.2,
+            bottom: ww*0.33,
+            left: ww*0.5
+        });
+        $(".click-mask-6").css({
+            width: ww*0.22,
+            height: ww*0.2,
+            bottom: ww*0.33,
+            right: 0
+        });
+        $(".click-mask-7").css({
+            width: ww*0.07,
+            height: ww*0.13,
+            bottom: 0,
+            left: ww*0.2
+        });
+        $(".click-mask-8").css({
+            width: ww*0.06,
+            height: ww*0.13,
+            bottom: 0,
+            left: ww*0.46
         });
         $(".bench").css({height: ww*0.124});
 

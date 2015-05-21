@@ -78,15 +78,15 @@ $signPackage = $jssdk->GetSignPackage();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN2-3x2.png" srcset="images/model/MAN2-3.png 500w, images/model/MAN2-3x2.png 1000w" alt="photo nico nb">
+                                            <img src="images/model/MAN2-4x2.png" srcset="images/model/MAN2-4.png 500w, images/model/MAN2-4x2.png 1000w" alt="photo nico nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN2-5x2.png" srcset="images/model/MAN2-5.png 500w, images/model/MAN2-5x2.png 1000w" alt="">
+                                            <img src="images/model/MAN2-6x2.png" srcset="images/model/MAN2-6.png 500w, images/model/MAN2-6x2.png 1000w" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="niko" class="photo-viensla" _src="images/model/MAN2-1x2.png" srcset="images/model/MAN2-1.png 500w, images/model/MAN2-1x2.png 1000w" alt="photo nico follomaton">
+                                            <img id="niko" class="photo-viensla" _src="images/model/MAN2-2x2.png" srcset="images/model/MAN2-2.png 500w, images/model/MAN2-2x2.png 1000w" alt="photo nico follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -157,6 +157,14 @@ $signPackage = $jssdk->GetSignPackage();
                                 <div class="click-fix-4"></div>
                                 <div class="click-fix-5"></div>
                                 <div class="click-fix-6"></div>
+                                <div class="click-mask-1"></div>
+                                <div class="click-mask-2"></div>
+                                <div class="click-mask-3"></div>
+                                <div class="click-mask-4"></div>
+                                <div class="click-mask-5"></div>
+                                <div class="click-mask-6"></div>
+                                <div class="click-mask-7"></div>
+                                <div class="click-mask-8"></div>
                                 <div class="bench"></div>
                                 <div class="ground"><img src="css/img/ground.png" alt=""></div>
                             </div>
@@ -168,9 +176,9 @@ $signPackage = $jssdk->GetSignPackage();
             <div class="ribbon ribbon-red"></div>
             <div class="ribbon ribbon-green"></div>
         </div>
-        <div class="racket"><img src="css/img/racket.png?v=<? echo date('ds',time())?>" alt=""></div>
+        <div class="racket"><img src="css/img/racket.png" alt=""></div>
         <div id="tennisball" style="z-index:999;position:absolute;">
-            <img style="width:30px;height:30px;" src="css/img/tennis.png?v=<? echo date('ds',time())?>">
+            <img style="width:30px;height:30px;" src="css/img/tennis.png">
         </div>
     </section>
     <div class="main-mask"></div>
@@ -191,7 +199,7 @@ $signPackage = $jssdk->GetSignPackage();
             <img src="images/product/02.png?v=<? echo date('ds',time())?>" alt="">
         </div>
         <span class="price">价格：990 元</span>
-        <a target="_blank" href="http://item.jd.com/1543281789.html">立即购买</a>
+        <a target="_blank" href="http://item.jd.com/1543281789.html">已售罄</a>
     </div>
     <div class="detail-box for_man-3">
         <button class="close">关闭</button>
@@ -228,6 +236,15 @@ $signPackage = $jssdk->GetSignPackage();
         </div>
         <span class="price">价格：990 元</span>
         <a target="_blank" href="http://item.jd.com/1543274075.html">立即购买</a>
+    </div>
+    <div class="detail-box for_racket">
+        <button class="close">关闭</button>
+        <h3>LT12限量系列网球拍</h3>
+        <div class="pic">
+            <img src="images/product/07.png" alt="">
+        </div>
+        <span class="price">价格：4990 元</span>
+        <a target="_blank" href="http://item.jd.com/1543287724.html">立即购买</a>
     </div>
     <!-- PRODUCT DETAIL -->
     <!-- PRODUCT DETAIL END -->
@@ -444,6 +461,55 @@ $signPackage = $jssdk->GetSignPackage();
             bottom: ww*0.22,
             left: ww*0.68
         });
+        $(".click-mask-1").css({
+            width: ww*0.08,
+            height: ww*0.2,
+            bottom: ww*0.22,
+            left: 0
+        });
+        $(".click-mask-2").css({
+            width: ww*0.14,
+            height: ww*0.2,
+            bottom: ww*0.33,
+            left: ww*0.08
+        });
+        $(".click-mask-3").css({
+            width: ww*0.15,
+            height: ww*0.2,
+            bottom: ww*0.33,
+            left: ww*0.28
+        });
+        $(".click-mask-4").css({
+            width: ww*0.7,
+            height: ww*0.1,
+            bottom: ww*0.42,
+            left: ww*0.18
+        });
+        $(".click-fix-5").css({
+            width: ww*0.13,
+            height: ww*0.2,
+            bottom: ww*0.2,
+            left: ww*0.41
+        });
+        $(".click-mask-6").css({
+            width: ww*0.22,
+            height: ww*0.2,
+            bottom: ww*0.33,
+            right: 0
+        });
+        $(".click-mask-7").css({
+            width: ww*0.07,
+            height: ww*0.13,
+            bottom: 0,
+            left: ww*0.2
+        });
+        $(".click-mask-8").css({
+            width: ww*0.06,
+            height: ww*0.13,
+            bottom: 0,
+            left: ww*0.46
+        });
+
         $(".bench").css({height: ww*0.124});
 
         $(".racket").css({
@@ -474,19 +540,12 @@ $signPackage = $jssdk->GetSignPackage();
         // $(".tc").css({marginLeft: -ww});
         // $(".tc.show").css({translate: [100,0]});
         $(".tc .inner").css({height: wh-50});
-        
-        
     };
     setContentSize();
 
     $(window).resize(function(){
         setContentSize();
     }).resize();
-
-    /*game guide*/
-    // setTimeout(function(){
-    //     $(".game-guide").addClass("show");
-    // },500);
 </script>
 <script type="text/javascript" src="js/common.js"></script>
 <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
