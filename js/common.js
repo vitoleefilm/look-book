@@ -31,12 +31,16 @@ $(document).ready(function() {
 
 	//判断手机横竖屏状态：  
     function get_orientation() {
+    	if ($('body').hasClass('pic-loaded')) {
+    		return;
+    	}
         if(window.orientation == -90 || window.orientation == 90 || window.orientation == undefined){
         	ww = window.innerWidth;
         	wh = window.innerHeight;
+        	$('.loading-page').css('display','block');
         	setContentSize();
         	// $('.loading-page').fadeIn(300,function() {
-        		$('.loading-page').addClass('show');
+        	$('.loading-page').addClass('show');
         	// });
         	var k = 1;
         	setTimeout(function() {
@@ -53,7 +57,7 @@ $(document).ready(function() {
 				var _this = $(this);
 				get_middle_line(_this,function() {
 					_this.find('.anim-photo img').attr('src',_this.find('.anim-photo img').attr('_src'));
-					_this.find('.anim-photo img').attr('style','top:-'+((ww*0.352)*12+7)+'');
+					_this.find('.anim-photo img').attr('style','top:-'+((ww*0.352)*12+3)+'');
 					_this.find('.anim-photo img').load(function() {
 						var percent = (k*17);
 						if (percent == 102) {
@@ -61,8 +65,9 @@ $(document).ready(function() {
 						}
 						$('.loading-page').find('.progress').html(percent+'%');
 						k = k + 1;
-						// $(this).attr('style','top:-'+((ww*0.352)*12+7)+'');
+						// $(this).attr('style','top:-'+((ww*0.352)*12+3)+'');
 						if (percent == 100) {
+							$('body').addClass('pic-loaded');
 							setTimeout(function() {
 								if ($('.loading-page').hasClass('show')) {
 									$('.loading-page').removeClass('show').addClass('fading');
@@ -70,7 +75,7 @@ $(document).ready(function() {
 										$('.loading-page').removeClass('fading');
 									});
 								}
-							},1000);
+							},2000);
 						}
 					});
 				});
@@ -147,7 +152,7 @@ $(document).ready(function() {
 			}
 		}
 		length = attr.length;
-		top_offset = -(length*size+7);
+		top_offset = -(length*size+3);
 		container.find('.anim-photo img').attr('style','top:'+top_offset+'');
 	}
 

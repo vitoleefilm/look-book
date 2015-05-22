@@ -2,6 +2,7 @@
 require_once "weixin.php";
 $jssdk = new WEIXIN("wx0c60164e2285620e", "06da31bfbcbe5457fc938054917997bb");
 $signPackage = $jssdk->GetSignPackage();
+$time_suffix = time();
 ?><html lang="zh">
 
 <head>
@@ -28,22 +29,22 @@ $signPackage = $jssdk->GetSignPackage();
     <aside class="menu">
         <h2><a href="javascript:;">LACOSTE LOOKBOOK</a></h2>
         <nav>
-            <ul>
-                <li><a href="javascript:;">读爱网球</a>
+             <ul>
+                <li><a class="red" href="http://www.lt12.cn/rltennis">读爱网球</a>
                 </li>
-                <li><a href="javascript:;">爱情对对碰</a>
+                <li><a class="green" href="http://www.lt12.cn/pong">爱情对对碰</a>
                 </li>
-                <li><a href="javascript:;">挑战快拍手</a>
+                <li><a class="blue" href="http://www.lt12.cn/scan">挑战快拍手</a>
                 </li>
-                <li><a href="javascript:;">0元飞巴黎</a>
+                <li><a class="grey" href="http://www.lt12.cn/info">0元飞巴黎</a>
                 </li>
-                <li><a href="javascript:;">产品型录</a>
+                <li><a class="red" href="http://www.lt12.cn/lookbook">产品型录</a>
                 </li>
-                <li><a href="javascript:;">趣扫红土场</a>
+                <li><a class="green" href="http://www.lt12.cn/redclay">趣扫红土场</a>
                 </li>
-                <li><a href="javascript:;">查找活动门店</a>
+                <li><a class="blue" href="http://www.lt12.cn/store">查找活动门店</a>
                 </li>
-                <li><a href="javascript:;">京东旗舰店</a>
+                <li><a class="grey" href="http://mall.jd.com/view_page-21935589.html">京东旗舰店</a>
                 </li>
             </ul>
         </nav>
@@ -62,15 +63,15 @@ $signPackage = $jssdk->GetSignPackage();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN1-4x2.png" srcset="images/model/MAN1-4.png 500w, images/model/MAN1-4x2.png 1000w" alt="photo jc nb">
+                                            <img src="images/model/MAN1-4x2.png" srcset="images/model/MAN1-4.png?v=<? echo $time_suffix;?> 250w, images/model/MAN1-4x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN1-4x3.png?v=<? echo $time_suffix;?> 660w" alt="photo jc nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN1-6x2.png" srcset="images/model/MAN1-6.png 500w, images/model/MAN1-6x2.png 1000w" alt="">
+                                            <img src="images/model/MAN1-6x2.png" srcset="images/model/MAN1-6.png?v=<? echo $time_suffix;?> 250w, images/model/MAN1-6x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN1-6x3.png?v=<? echo $time_suffix;?> 660w" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="jc" class="photo-viensla" _src="images/model/MAN1-2x2.png" srcset="images/model/MAN1-2.png 500w, images/model/MAN1-2x2.png 1000w" alt="photo jc follomaton">
+                                            <img id="jc" class="photo-viensla" _src="images/model/MAN1-2x2.png" srcset="images/model/MAN1-2.png?v=<? echo $time_suffix;?> 250w, images/model/MAN1-2x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN1-2x3.png?v-=<? echo $time_suffix;?> 660w" alt="photo jc follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -78,15 +79,15 @@ $signPackage = $jssdk->GetSignPackage();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN2-4x2.png" srcset="images/model/MAN2-4.png 500w, images/model/MAN2-4x2.png 1000w" alt="photo nico nb">
+                                            <img src="images/model/MAN2-4x2.png" srcset="images/model/MAN2-4.png?v=<? echo $time_suffix;?> 250w, images/model/MAN2-4x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN2-4x3.png?v=<? echo $time_suffix;?> 660w" alt="photo nico nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN2-6x2.png" srcset="images/model/MAN2-6.png 500w, images/model/MAN2-6x2.png 1000w" alt="">
+                                            <img src="images/model/MAN2-6x2.png" srcset="images/model/MAN2-6.png?v=<? echo $time_suffix;?> 250w, images/model/MAN2-6x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN2-6x3.png?v=<? echo $time_suffix;?> 660w" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="niko" class="photo-viensla" _src="images/model/MAN2-2x2.png" srcset="images/model/MAN2-2.png 500w, images/model/MAN2-2x2.png 1000w" alt="photo nico follomaton">
+                                            <img id="niko" class="photo-viensla" _src="images/model/MAN2-2x2.png" srcset="images/model/MAN2-2.png?v=<? echo $time_suffix;?> 250w, images/model/MAN2-2x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN2-2x3.png?=<? echo $time_suffix;?> 660w" alt="photo nico follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -94,15 +95,15 @@ $signPackage = $jssdk->GetSignPackage();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN3-4x2.png" srcset="images/model/MAN3-4.png 500w, images/model/MAN3-4x2.png 1000w" alt="photo fred nb">
+                                            <img src="images/model/MAN3-4x2.png" srcset="images/model/MAN3-4.png?v=<? echo $time_suffix;?> 250w, images/model/MAN3-4x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN3-4x3.png?v=<? echo $time_suffix;?> 660w" alt="photo fred nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN3-6x2.png" srcset="images/model/MAN3-6.png 500w, images/model/MAN3-6x2.png 1000w" alt="">
+                                            <img src="images/model/MAN3-6x2.png" srcset="images/model/MAN3-6.png?v=<? echo $time_suffix;?> 250w, images/model/MAN3-6x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN3-6x3.png?v=<? echo $time_suffix;?> 660w" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="fred" class="photo-viensla" _src="images/model/MAN3-2x2.png" srcset="images/model/MAN3-2.png 500w, images/model/MAN3-2x2.png 1000w" alt="photo fred follomaton">
+                                            <img id="fred" class="photo-viensla" _src="images/model/MAN3-2x2.png" srcset="images/model/MAN3-2.png?v=<? echo $time_suffix;?> 250w, images/model/MAN3-2x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN3-2x3.png?=<? echo $time_suffix;?> 660w" alt="photo fred follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -110,15 +111,15 @@ $signPackage = $jssdk->GetSignPackage();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN4-4x2.png" srcset="images/model/MAN4-4.png 500w, images/model/MAN4-4x2.png 1000w" alt="photo fred nb">
+                                            <img src="images/model/MAN4-4x2.png" srcset="images/model/MAN4-4.png?v=<? echo $time_suffix;?> 250w, images/model/MAN4-4x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN4-4x3.png?v=<? echo $time_suffix;?> 660w" alt="photo fred nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN4-6x2.png" srcset="images/model/MAN4-6.png 500w, images/model/MAN4-6x2.png 1000w" alt="">
+                                            <img src="images/model/MAN4-6x2.png" srcset="images/model/MAN4-6.png?v=<? echo $time_suffix;?> 250w, images/model/MAN4-6x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN4-6x3.png?v=<? echo $time_suffix;?> 660w" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="fred" class="photo-viensla" _src="images/model/MAN4-2x2.png" srcset="images/model/MAN4-2.png 500w, images/model/MAN4-2x2.png 1000w" alt="photo fred follomaton">
+                                            <img id="fred" class="photo-viensla" _src="images/model/MAN4-2x2.png" srcset="images/model/MAN4-2.png?v=<? echo $time_suffix;?> 250w, images/model/MAN4-2x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN4-2x3.png?=<? echo $time_suffix;?> 660w" alt="photo fred follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -126,15 +127,15 @@ $signPackage = $jssdk->GetSignPackage();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN5-4x2.png" srcset="images/model/MAN5-4.png 500w, images/model/MAN5-4x2.png 1000w" alt="photo nico nb">
+                                            <img src="images/model/MAN5-4x2.png" srcset="images/model/MAN5-4.png?v=<? echo $time_suffix;?> 250w, images/model/MAN5-4x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN5-4x3.png?v=<? echo $time_suffix;?> 660w" alt="photo nico nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN5-6x2.png" srcset="images/model/MAN5-6.png 500w, images/model/MAN5-6x2.png 1000w" alt="">
+                                            <img src="images/model/MAN5-6x2.png" srcset="images/model/MAN5-6.png?v=<? echo $time_suffix;?> 250w, images/model/MAN5-6x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN5-6x3.png?v=<? echo $time_suffix;?> 660w" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="niko" class="photo-viensla" _src="images/model/MAN5-2x2.png" srcset="images/model/MAN5-2.png 500w, images/model/MAN5-2x2.png 1000w" alt="photo nico follomaton">
+                                            <img id="niko" class="photo-viensla" _src="images/model/MAN5-2x2.png" srcset="images/model/MAN5-2.png?v=<? echo $time_suffix;?> 250w, images/model/MAN5-2x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN5-2x3.png?=<? echo $time_suffix;?> 660w" alt="photo nico follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -142,15 +143,15 @@ $signPackage = $jssdk->GetSignPackage();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN6-4x2.png" srcset="images/model/MAN6-4.png 500w, images/model/MAN6-4x2.png 1000w" alt="photo jc nb">
+                                            <img src="images/model/MAN6-4x2.png" srcset="images/model/MAN6-4.png?v=<? echo $time_suffix;?> 250w, images/model/MAN6-4x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN6-4x3.png?v=<? echo $time_suffix;?> 660w" alt="photo jc nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN6-6x2.png" srcset="images/model/MAN6-6.png 500w, images/model/MAN6-6x2.png 1000w" alt="">
+                                            <img src="images/model/MAN6-6x2.png" srcset="images/model/MAN6-6.png?v=<? echo $time_suffix;?> 250w, images/model/MAN6-6x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN6-6x3.png?v=<? echo $time_suffix;?> 660w" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="jc" class="photo-viensla" _src="images/model/MAN6-2x2.png" srcset="images/model/MAN6-2.png 500w, images/model/MAN6-2x2.png 1000w" alt="photo jc follomaton">
+                                            <img id="jc" class="photo-viensla" _src="images/model/MAN6-2x2.png" srcset="images/model/MAN6-2.png?v=<? echo $time_suffix;?> 250w, images/model/MAN6-2x2.png?v=<? echo $time_suffix;?> 400w, images/model/MAN6-2x3.png?v-=<? echo $time_suffix;?> 660w" alt="photo jc follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -199,7 +200,7 @@ $signPackage = $jssdk->GetSignPackage();
             <img src="images/product/02.png?v=<? echo date('ds',time())?>" alt="">
         </div>
         <span class="price">价格：990 元</span>
-        <a target="_blank" href="http://item.jd.com/1543281789.html">已售罄</a>
+        <a href="javascript:;">已售罄</a>
     </div>
     <div class="detail-box for_man-3">
         <button class="close">关闭</button>
@@ -546,9 +547,9 @@ $signPackage = $jssdk->GetSignPackage();
     };
     setContentSize();
 
-    $(window).resize(function(){
-        setContentSize();
-    }).resize();
+    // $(window).resize(function(){
+    //     setContentSize();
+    // }).resize();
 
     /*game guide*/
     // setTimeout(function(){
@@ -577,7 +578,7 @@ $signPackage = $jssdk->GetSignPackage();
             wx.onMenuShareTimeline({
                 title: ' LACOSTE互动【产品型录】中更有型男演绎LT12限量系列！速来围观！', // 分享标题
                 link: '', // 分享链接
-                imgUrl: 'http://lt12.ffshtest.net/lookbook/css/img/logo.png?v=<? echo time();?>', // 分享图标
+                imgUrl: 'http://lt12.ffshtest.net/lookbook/css/img/logo.png', // 分享图标
                 success: function () {
                 },
                 cancel: function () {
