@@ -79,15 +79,15 @@ $time_suffix = time();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN2-4x2.png" srcset="images/model/MAN2-4.png 250w, images/model/MAN2-4x2.png 400w, images/model/MAN2-4x3.png 660w" alt="photo nico nb">
+                                            <img src="images/model/MAN2-3x2.png" srcset="images/model/MAN2-3.png 250w, images/model/MAN2-3x2.png 400w, images/model/MAN2-3x3.png 660w" alt="photo nico nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN2-6x2.png" srcset="images/model/MAN2-6.png 250w, images/model/MAN2-6x2.png 400w, images/model/MAN2-6x3.png 660w" alt="">
+                                            <img src="images/model/MAN2-5x2.png" srcset="images/model/MAN2-5.png 250w, images/model/MAN2-5x2.png 400w, images/model/MAN2-5x3.png 660w" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="niko" class="photo-viensla" _src="images/model/MAN2-2x2.png?v=<? echo time();?>" srcset="images/model/MAN2-2.png 250w, images/model/MAN2-2x2.png 400w, images/model/MAN2-2x3.png 660w" alt="photo nico follomaton">
+                                            <img id="niko" class="photo-viensla" _src="images/model/MAN2-1x2.png?v=<? echo time();?>" srcset="images/model/MAN2-1.png 250w, images/model/MAN2-1x2.png 400w, images/model/MAN2-1x3.png 660w" alt="photo nico follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -188,7 +188,7 @@ $time_suffix = time();
         <button class="close">关闭</button>
         <h3>LT12限量系列灰色T恤衫</h3>
         <div class="pic">
-            <img src="images/product/01.png?v=<? echo date('ds',time())?>" alt="">
+            <img src="images/product/01.png" alt="">
         </div>
         <span class="price">价格：590 元</span>
         <a target="_blank" href="http://item.jd.com/1543278289.html">立即购买</a>
@@ -197,16 +197,16 @@ $time_suffix = time();
         <button class="close">关闭</button>
         <h3>LT12限量系列蓝色POLO衫</h3>
         <div class="pic">
-            <img src="images/product/02.png?v=<? echo date('ds',time())?>" alt="">
+            <img src="images/product/02.png" alt="">
         </div>
         <span class="price">价格：990 元</span>
-        <a href="javascript:;">已售罄</a>
+        <a target="_blank" href="http://item.jd.com/1543281789.html">立即购买</a>
     </div>
     <div class="detail-box for_man-3">
         <button class="close">关闭</button>
         <h3>限量系列白色T恤衫</h3>
         <div class="pic">
-            <img src="images/product/03.png?v=<? echo date('ds',time())?>" alt="">
+            <img src="images/product/03.png" alt="">
         </div>
         <span class="price">价格：590 元</span>
         <a target="_blank" href="http://item.jd.com/1494360810.html">立即购买</a>
@@ -215,25 +215,25 @@ $time_suffix = time();
         <button class="close">关闭</button>
         <h3>LT12限量系列蓝色T恤衫</h3>
         <div class="pic">
-            <img src="images/product/04.png?v=<? echo date('ds',time())?>" alt="">
+            <img src="images/product/04.png" alt="">
         </div>
         <span class="price">价格：590 元</span>
-        <a target="_blank" href="http://item.jd.com/1543278289.html">立即购买</a>
+        <a target="_blank" href="http://item.jd.com/1570980480.html">立即购买</a>
     </div>
     <div class="detail-box for_man-5">
         <button class="close">关闭</button>
-        <h3>LT12限量系列黑色T恤衫</h3>
+        <h3>LT12限量系列深蓝色T恤衫</h3>
         <div class="pic">
-            <img src="images/product/05.png?v=<? echo date('ds',time())?>" alt="">
+            <img src="images/product/05.png" alt="">
         </div>
         <span class="price">价格：590 元</span>
-        <a target="_blank" href="http://item.jd.com/1543278289.htm">立即购买</a>
+        <a target="_blank" href="http://item.jd.com/1494360490.html">立即购买</a>
     </div>
     <div class="detail-box for_man-6">
         <button class="close">关闭</button>
         <h3>LT12限量系列黑色POLO衫</h3>
         <div class="pic">
-            <img src="images/product/06.png?v=<? echo date('ds',time())?>" alt="">
+            <img src="images/product/06.png" alt="">
         </div>
         <span class="price">价格：990 元</span>
         <a target="_blank" href="http://item.jd.com/1543274075.html">立即购买</a>
@@ -245,7 +245,7 @@ $time_suffix = time();
             <img src="images/product/07.png" alt="">
         </div>
         <span class="price">价格：4990 元</span>
-        <a target="_blank" href="http://item.jd.com/1543287724.html">立即购买</a>
+        <a target="_blank" href="http://item.jd.com/1552558895.html">立即购买</a>
     </div>
     <!-- PRODUCT DETAIL -->
     <!-- PRODUCT DETAIL END -->
@@ -285,7 +285,7 @@ $time_suffix = time();
         </div>
         <footer>
             <a class="read-tc" target="_blank" href="javascript:;">法律声明条款</a>
-            <a target="_blank" href="javascript:;">ICP</a>
+            <a target="_blank" href="javascript:;">沪ICP备13005267号-17</a>
         </footer>
     </div>
     <!-- END PORTRAIT -->
@@ -403,6 +403,7 @@ $time_suffix = time();
     <!-- END TC -->
 <script type="text/javascript" src="js/jquery.transit.min.js"></script>
 <script>
+    $(".tc .inner").css({height: $(window).height()-50});
     /*set content size*/
     function setContentSize() {
         var ww = window.innerWidth;
@@ -540,7 +541,7 @@ $time_suffix = time();
         /*tc*/
         // $(".tc").css({marginLeft: -ww});
         // $(".tc.show").css({translate: [100,0]});
-        $(".tc .inner").css({height: wh-50});
+        // $(".tc .inner").css({height: wh-50});
     };
     setContentSize();
 

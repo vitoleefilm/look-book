@@ -188,7 +188,7 @@ $time_suffix = time();
         <button class="close">关闭</button>
         <h3>LT12限量系列灰色T恤衫</h3>
         <div class="pic">
-            <img src="images/product/01.png?v=<? echo date('ds',time())?>" alt="">
+            <img src="images/product/01.png" alt="">
         </div>
         <span class="price">价格：590 元</span>
         <a target="_blank" href="http://item.jd.com/1543278289.html">立即购买</a>
@@ -197,7 +197,7 @@ $time_suffix = time();
         <button class="close">关闭</button>
         <h3>LT12限量系列蓝色POLO衫</h3>
         <div class="pic">
-            <img src="images/product/02.png?v=<? echo date('ds',time())?>" alt="">
+            <img src="images/product/02.png" alt="">
         </div>
         <span class="price">价格：990 元</span>
         <a href="javascript:;">已售罄</a>
@@ -206,7 +206,7 @@ $time_suffix = time();
         <button class="close">关闭</button>
         <h3>限量系列白色T恤衫</h3>
         <div class="pic">
-            <img src="images/product/03.png?v=<? echo date('ds',time())?>" alt="">
+            <img src="images/product/03.png" alt="">
         </div>
         <span class="price">价格：590 元</span>
         <a target="_blank" href="http://item.jd.com/1494360810.html">立即购买</a>
@@ -215,37 +215,28 @@ $time_suffix = time();
         <button class="close">关闭</button>
         <h3>LT12限量系列蓝色T恤衫</h3>
         <div class="pic">
-            <img src="images/product/04.png?v=<? echo date('ds',time())?>" alt="">
+            <img src="images/product/04.png" alt="">
         </div>
         <span class="price">价格：590 元</span>
-        <a target="_blank" href="http://item.jd.com/1543278289.html">立即购买</a>
+        <a target="_blank" href="http://item.jd.com/1570980480.html">立即购买</a>
     </div>
     <div class="detail-box for_man-5">
         <button class="close">关闭</button>
-        <h3>LT12限量系列黑色T恤衫</h3>
+        <h3>LT12限量系列深蓝色T恤衫</h3>
         <div class="pic">
-            <img src="images/product/05.png?v=<? echo date('ds',time())?>" alt="">
+            <img src="images/product/05.png" alt="">
         </div>
         <span class="price">价格：590 元</span>
-        <a target="_blank" href="http://item.jd.com/1543278289.htm">立即购买</a>
+        <a target="_blank" href="http://item.jd.com/1494360490.html">立即购买</a>
     </div>
     <div class="detail-box for_man-6">
         <button class="close">关闭</button>
         <h3>LT12限量系列黑色POLO衫</h3>
         <div class="pic">
-            <img src="images/product/06.png?v=<? echo date('ds',time())?>" alt="">
+            <img src="images/product/06.png" alt="">
         </div>
         <span class="price">价格：990 元</span>
         <a target="_blank" href="http://item.jd.com/1543274075.html">立即购买</a>
-    </div>
-    <div class="detail-box for_racket">
-        <button class="close">关闭</button>
-        <h3>LT12限量系列网球拍</h3>
-        <div class="pic">
-            <img src="images/product/07.png" alt="">
-        </div>
-        <span class="price">价格：4990 元</span>
-        <a target="_blank" href="http://item.jd.com/1543287724.html">立即购买</a>
     </div>
     <!-- PRODUCT DETAIL -->
     <!-- PRODUCT DETAIL END -->

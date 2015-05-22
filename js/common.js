@@ -46,6 +46,7 @@ $(document).ready(function() {
         	setTimeout(function() {
         		if ($('.loading-page').hasClass('show') && !$('.loading-page').hasClass('fading')) {
         			$('.loading-page').find('.progress').html('100%');
+        			$('body').addClass('pic-loaded');
         			$('.loading-page').removeClass('show');
 					$('.loading-page').fadeOut(3000,function() {
 						$('.loading-page').addClass('loaded');

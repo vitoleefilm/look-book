@@ -1,4 +1,9 @@
-<html lang="zh">
+<?php
+require_once "weixin.php";
+$jssdk = new WEIXIN("wx0c60164e2285620e", "06da31bfbcbe5457fc938054917997bb");
+$signPackage = $jssdk->GetSignPackage();
+$time_suffix = time();
+?><html lang="zh">
 
 <head>
     <meta charset="UTF-8">
@@ -25,21 +30,21 @@
         <h2><a href="javascript:;">LACOSTE LOOKBOOK</a></h2>
         <nav>
             <ul>
-                <li><a href="javascript:;">读爱网球</a>
+                <li><a class="red" href="http://www.lt12.cn/rltennis">读爱网球</a>
                 </li>
-                <li><a href="javascript:;">爱情对对碰</a>
+                <li><a class="green" href="http://www.lt12.cn/pong">爱情对对碰</a>
                 </li>
-                <li><a href="javascript:;">挑战快拍手</a>
+                <li><a class="blue" href="http://www.lt12.cn/scan">挑战快拍手</a>
                 </li>
-                <li><a href="javascript:;">0元飞巴黎</a>
+                <li><a class="grey" href="http://www.lt12.cn/info">0元飞巴黎</a>
                 </li>
-                <li><a href="javascript:;">产品型录</a>
+                <li><a class="red" href="http://www.lt12.cn/lookbook">产品型录</a>
                 </li>
-                <li><a href="javascript:;">趣扫红土场</a>
+                <li><a class="green" href="http://www.lt12.cn/redclay">趣扫红土场</a>
                 </li>
-                <li><a href="javascript:;">查找活动门店</a>
+                <li><a class="blue" href="http://www.lt12.cn/store">查找活动门店</a>
                 </li>
-                <li><a href="javascript:;">京东旗舰店</a>
+                <li><a class="grey" href="http://mall.jd.com/view_page-21935589.html">京东旗舰店</a>
                 </li>
             </ul>
         </nav>
@@ -175,6 +180,7 @@
 <script type="text/javascript" src="js/jquery.transit.min.js"></script>
 <script>
     /*set content size*/
+    $(".tc .inner").css({height: $(window).height()-50});
     function setContentSize() {
         var ww = $(window).width();
         var wh = $(window).height();
@@ -310,7 +316,7 @@
         /*tc*/
         // $(".tc").css({marginLeft: -ww});
         // $(".tc.show").css({translate: [100,0]});
-        $(".tc .inner").css({height: wh-50});
+        // $(".tc .inner").css({height: wh-50});
         
         
     };
@@ -334,8 +340,60 @@
         $(".menu").removeClass("show");
     });
 
+    /*tc*/
+    $(".read-tc").on('touchstart',function(){
+        $(".tc").addClass("show");
+    });
+    $(".tc .close").on('touchstart',function(){
+        $(".tc").removeClass("show");
+    });
+
 </script>
 <!-- <script type="text/javascript" src="js/common.js"></script> -->
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script type="text/javascript">
+    function isWeixinBrowser(){
+        var ua = navigator.userAgent.toLowerCase();
+        return (/micromessenger/.test(ua)) ? true : false ;
+    }
+    if (isWeixinBrowser()) {
+        wx.config({
+            appId: '<?php echo $signPackage["appId"];?>',
+            timestamp: <?php echo $signPackage["timestamp"];?>,
+            nonceStr: '<?php echo $signPackage["nonceStr"];?>',
+            signature: '<?php echo $signPackage["signature"];?>',
+            jsApiList: [
+                'onMenuShareTimeline','onMenuShareAppMessage'
+            ]
+        });
+
+        wx.ready(function () {
+            wx.onMenuShareTimeline({
+                title: ' LACOSTE互动【产品型录】中更有型男演绎LT12限量系列！速来围观！', // 分享标题
+                link: 'http://lt12.ffshtest.net/lookbook/portrait.html', // 分享链接
+                imgUrl: 'http://lt12.ffshtest.net/lookbook/images/share/lookbooksharepic.jpg', // 分享图标
+                success: function () {
+                },
+                cancel: function () {
+                }
+            });
+            wx.onMenuShareAppMessage({
+                title: 'LACOSTE互动【产品型录】中更有型男演绎LT12限量系列！速来围观！', // 分享标题
+                desc: '', // 分享描述
+                link: 'http://lt12.ffshtest.net/lookbook/portrait.html', // 分享链接
+                imgUrl: 'http://lt12.ffshtest.net/lookbook/images/share/lookbooksharepic.jpg', // 分享图标
+                type: '', // 分享类型,music、video或link，不填默认为link
+                dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+                success: function () { 
+                    // 用户确认分享后执行的回调函数
+                },
+                cancel: function () { 
+                    // 用户取消分享后执行的回调函数
+                }
+            });
+        });
+    }
+</script>
 </body>
 
 </html>
