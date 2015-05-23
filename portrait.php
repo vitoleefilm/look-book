@@ -1,6 +1,6 @@
 <?php
 require_once "weixin.php";
-$jssdk = new WEIXIN("wx0c60164e2285620e", "06da31bfbcbe5457fc938054917997bb");
+$jssdk = new WEIXIN("wxa7f65d2ea613627a", "38b39a59114fbafee8b70c6d673a52b7");
 $signPackage = $jssdk->GetSignPackage();
 $time_suffix = time();
 ?><html lang="zh">
@@ -32,16 +32,16 @@ $time_suffix = time();
             <ul>
                 <li><a class="red" href="http://www.lt12.cn/rltennis">读爱网球</a>
                 </li>
-                <li><a class="green" href="http://www.lt12.cn/pong">爱情对对碰</a>
+                <!-- <li><a class="green" href="http://www.lt12.cn/pong">爱情对对碰</a>
                 </li>
                 <li><a class="blue" href="http://www.lt12.cn/scan">挑战快拍手</a>
-                </li>
+                </li> -->
                 <li><a class="grey" href="http://www.lt12.cn/info">0元飞巴黎</a>
                 </li>
                 <li><a class="red" href="http://www.lt12.cn/lookbook">产品型录</a>
                 </li>
-                <li><a class="green" href="http://www.lt12.cn/redclay">趣扫红土场</a>
-                </li>
+                <!-- <li><a class="green" href="http://www.lt12.cn/redclay">趣扫红土场</a>
+                </li> -->
                 <li><a class="blue" href="http://www.lt12.cn/store">查找活动门店</a>
                 </li>
                 <li><a class="grey" href="http://mall.jd.com/view_page-21935589.html">京东旗舰店</a>
@@ -393,6 +393,16 @@ $time_suffix = time();
             });
         });
     }
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62410525-1', 'auto');
+  ga('send', 'pageview');
+
 </script>
 </body>
 

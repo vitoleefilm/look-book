@@ -187,7 +187,7 @@ $(document).ready(function() {
 		}
 		x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
         y = e.originalEvent.targetTouches[0].clientY.toFixed(2);
-		$('#tennisball').css({'left':x-15,'top':y-15});
+		$('#tennisball').css({'left':x-20,'top':y-20});
 		for (index in container_attr) {
 			get_offset(index,container_attr[index]);
 		} 
