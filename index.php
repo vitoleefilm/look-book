@@ -1,6 +1,6 @@
 <?php
 require_once "weixin.php";
-$jssdk = new WEIXIN("wxa7f65d2ea613627a", "38b39a59114fbafee8b70c6d673a52b7");
+$jssdk = new WEIXIN("wx0c60164e2285620e", "06da31bfbcbe5457fc938054917997bb");
 $signPackage = $jssdk->GetSignPackage();
 $time_suffix = time();
 ?><html lang="zh">
