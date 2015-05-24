@@ -464,19 +464,18 @@ button {
     opacity: 1;
 }
 #tennisball {
-    top: 90%;
-    left: 80%;
+    width: 40px;
+    height: 40px;
+    top: 35%;
+    left: 90%;
 }
 #tennisball img {
     display: block;
-    width: 30px;
-    height: 30px;
-}
-@media (min-width: 640px) {
-    #tennisball img {
-        width: 60px;
-        height: 60px;
-    }
+    position: relative;
+    width: 80px;
+    height: 80px;
+    left: -20px;
+    top: -20px;
 }
 .bench {
     position: absolute;
