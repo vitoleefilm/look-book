@@ -310,9 +310,9 @@ $(document).ready(function() {
 
     /*tc*/
     $(".read-tc").click(function(){
-        $(".tc").addClass("show");
+        $(".tc").fadeIn();
     });
     $(".tc .close").click(function(){
-        $(".tc").removeClass("show");
+        $(".tc").fadeOut();
     });
 });
