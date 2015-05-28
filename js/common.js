@@ -6,6 +6,7 @@
 $(document).ready(function() {
 	var ww = $(window).width();
     var wh = $(window).height();
+    var bw = $('#tennisball').width()/2;
 
     //////////////////////////////////////动画模块////////////////////////////////////
 	// 鼠标相对文档的偏移量
@@ -57,7 +58,6 @@ $(document).ready(function() {
             $('.col').each(function() {
 				var _this = $(this);
 				get_middle_line(_this,function() {
-					_this.find('.anim-photo img').attr('src',_this.find('.anim-photo img').attr('_src'));
 					_this.find('.anim-photo img').attr('style','top:-'+((ww*0.352)*12+3)+'');
 					_this.find('.anim-photo img').load(function() {
 						var percent = (k*17);
@@ -187,7 +187,7 @@ $(document).ready(function() {
 		}
 		x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
         y = e.originalEvent.targetTouches[0].clientY.toFixed(2);
-		$('#tennisball').css({'left':x-20,'top':y-20});
+		$('#tennisball').css({'left':x-bw,'top':y-bw});
 		for (index in container_attr) {
 			get_offset(index,container_attr[index]);
 		} 
@@ -206,8 +206,18 @@ $(document).ready(function() {
 	// });
 
 ////////////////////////////////////////////点击事件//////////////////////////////////////////////////
- 	$(".game-guide .close").on('touchstart',function(){
+ 	$(".game-guide .close").on('touchstart',function(e){
+		$('#tennisball').find('.png').hide();
+		$('#tennisball').css({'z-index':999});
+		$('#tennisball').find('.gif').show();
+
         $(".game-guide").removeClass("show");
+
+        setTimeout(function() {
+			$('#tennisball').find('.gif').hide();
+			$('#tennisball').css({'z-index':200});
+			$('#tennisball').find('.png').show();
+		},1000);
     });
 
     /*Product Detail*/
@@ -216,6 +226,7 @@ $(document).ready(function() {
     	// 	return;
     	// }
     	$('.main').addClass('showing');
+    	// $('#tennisball').css({'z-index':999});
 
         var _id=$(this).attr('id');
         var _detail = $('.detail-box.for_'+_id);
@@ -227,10 +238,18 @@ $(document).ready(function() {
         $(this).addClass("active");
         _detail.addClass("show");
     });
-    $(".detail-box .close").click(function(){
-        $(".detail-box").removeClass("show");
+    $(".detail-box .close").click(function(e){
+        $('#tennisball').find('.png').hide();
+		$('#tennisball').find('.gif').show();
+		
+		$(".detail-box").removeClass("show");
         $(".main").removeClass("white showing");
         $("#equipe .block-content .content-partie .intro-partie .col").removeClass("active").removeClass("blur");
+		setTimeout(function() {
+			$('#tennisball').find('.gif').hide();
+			$('#tennisball').css({'z-index':200});
+			$('#tennisball').find('.png').show();
+		},1000);
     });
 
     $(".click-fix-4").on('touchstart',function(){
@@ -307,12 +326,4 @@ $(document).ready(function() {
     // $(".loading-page").click(function(){
     //     $(this).toggleClass("show");
     // });
-
-    /*tc*/
-    $(".read-tc").click(function(){
-        $(".tc").fadeIn();
-    });
-    $(".tc .close").click(function(){
-        $(".tc").fadeOut();
-    });
 });

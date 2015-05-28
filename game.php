@@ -1,6 +1,6 @@
 <?php
 require_once "weixin.php";
-$jssdk = new WEIXIN("wx0c60164e2285620e", "06da31bfbcbe5457fc938054917997bb");
+$jssdk = new WEIXIN("wxa7f65d2ea613627a", "38b39a59114fbafee8b70c6d673a52b7");
 $signPackage = $jssdk->GetSignPackage();
 $time_suffix = time();
 ?><html lang="zh">
@@ -8,8 +8,8 @@ $time_suffix = time();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <title>LACOSTE LOOKBOOK</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Lacoste LT12 Lookbook</title>
+    <link rel="stylesheet" href="css/style.css?v=34323324">
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 </head>
 
@@ -63,15 +63,15 @@ $time_suffix = time();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN1-3x2.png" srcset="images/model/MAN1-3.png 250w, images/model/MAN1-3x2.png 400w, images/model/MAN1-3x3.png 660w" alt="photo jc nb">
+                                            <img _src="images/model/MAN1-3.png", _src2="images/model/MAN1-3x2.png" src="images/model/MAN1-3x2.png" alt="photo jc nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN1-5x2.png" srcset="images/model/MAN1-5.png 250w, images/model/MAN1-5x2.png 400w, images/model/MAN1-5x3.png 660w" alt="">
+                                            <img _src="images/model/MAN1-5.png", _src2="images/model/MAN1-5x2.png" src="images/model/MAN1-5x2.png" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="jc" class="photo-viensla" _src="images/model/MAN1-1x2.png?v=<? echo time();?>" srcset="images/model/MAN1-1.png 250w, images/model/MAN1-1x2.png 400w, images/model/MAN1-1x3.png 660w" alt="photo jc follomaton">
+                                            <img id="jc" class="photo-viensla" src="images/model/MAN1-1x2.png?v=20150525" alt="photo jc follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -79,15 +79,15 @@ $time_suffix = time();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN2-3x2.png" srcset="images/model/MAN2-3.png 250w, images/model/MAN2-3x2.png 400w, images/model/MAN2-3x3.png 660w" alt="photo nico nb">
+                                            <img _src="images/model/MAN2-3.png", _src2="images/model/MAN2-3x2.png" src="images/model/MAN2-3x2.png" alt="photo nico nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN2-5x2.png" srcset="images/model/MAN2-5.png 250w, images/model/MAN2-5x2.png 400w, images/model/MAN2-5x3.png 660w" alt="">
+                                            <img _src="images/model/MAN2-5.png", _src2="images/model/MAN2-5x2.png" src="images/model/MAN2-5x2.png" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="niko" class="photo-viensla" _src="images/model/MAN2-1x2.png?v=<? echo time();?>" srcset="images/model/MAN2-1.png 250w, images/model/MAN2-1x2.png 400w, images/model/MAN2-1x3.png 660w" alt="photo nico follomaton">
+                                            <img id="niko" class="photo-viensla" src="images/model/MAN2-1x2.png?v=20150525" alt="photo nico follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -95,15 +95,15 @@ $time_suffix = time();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN3-3x2.png" srcset="images/model/MAN3-3.png 250w, images/model/MAN3-3x2.png 400w, images/model/MAN3-3x3.png 660w" alt="photo fred nb">
+                                            <img _src="images/model/MAN3-3.png", _src2="images/model/MAN3-3x2.png" src="images/model/MAN3-3x2.png" alt="photo fred nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN3-5x2.png" srcset="images/model/MAN3-5.png 250w, images/model/MAN3-5x2.png 400w, images/model/MAN3-5x3.png 660w" alt="">
+                                            <img _src="images/model/MAN3-5.png", _src2="images/model/MAN3-5x2.png" src="images/model/MAN3-5x2.png" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="fred" class="photo-viensla" _src="images/model/MAN3-1x2.png?v=<? echo time();?>" srcset="images/model/MAN3-1.png 250w, images/model/MAN3-1x2.png 400w, images/model/MAN3-1x3.png 660w" alt="photo fred follomaton">
+                                            <img id="fred" class="photo-viensla" src="images/model/MAN3-1x2.png?v=20150525" alt="photo fred follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -111,15 +111,15 @@ $time_suffix = time();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN4-3x2.png" srcset="images/model/MAN4-3.png 250w, images/model/MAN4-3x2.png 400w, images/model/MAN4-3x3.png 660w" alt="photo fred nb">
+                                            <img _src="images/model/MAN4-3.png", _src2="images/model/MAN4-3x2.png" src="images/model/MAN4-3x2.png" alt="photo fred nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN4-5x2.png" srcset="images/model/MAN4-5.png 250w, images/model/MAN4-5x2.png 400w, images/model/MAN4-5x3.png 660w" alt="">
+                                            <img _src="images/model/MAN4-5.png", _src2="images/model/MAN4-5x2.png" src="images/model/MAN4-5x2.png" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="fred" class="photo-viensla" _src="images/model/MAN4-1x2.png?v=<? echo time();?>" srcset="images/model/MAN4-1.png 250w, images/model/MAN4-1x2.png 400w, images/model/MAN4-1x3.png 660w" alt="photo fred follomaton">
+                                            <img id="fred" class="photo-viensla" src="images/model/MAN4-1x2.png?v=20150525" alt="photo fred follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -127,15 +127,15 @@ $time_suffix = time();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN5-3x2.png" srcset="images/model/MAN5-3.png 250w, images/model/MAN5-3x2.png 400w, images/model/MAN5-3x3.png 660w" alt="photo nico nb">
+                                            <img _src="images/model/MAN5-3.png", _src2="images/model/MAN5-3x2.png" src="images/model/MAN5-3x2.png" alt="photo nico nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN5-5x2.png" srcset="images/model/MAN5-5.png 250w, images/model/MAN5-5x2.png 400w, images/model/MAN5-5x3.png 660w" alt="">
+                                            <img _src="images/model/MAN5-5.png", _src2="images/model/MAN5-5x2.png" src="images/model/MAN5-5x2.png" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="niko" class="photo-viensla" _src="images/model/MAN5-1x2.png?v=<? echo time();?>" srcset="images/model/MAN5-1.png 250w, images/model/MAN5-1x2.png 400w, images/model/MAN5-1x3.png 660w" alt="photo nico follomaton">
+                                            <img id="niko" class="photo-viensla" src="images/model/MAN5-1x2.png?v=20150525" alt="photo nico follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -143,15 +143,14 @@ $time_suffix = time();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img src="images/model/MAN6-3x2.png" srcset="images/model/MAN6-3.png 250w, images/model/MAN6-3x2.png 400w, images/model/MAN6-3x3.png 660w" alt="photo jc nb">
+                                            <img _src="images/model/MAN6-3.png", _src2="images/model/MAN6-3x2.png" src="images/model/MAN6-3x2.png" alt="photo jc nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img src="images/model/MAN6-5x2.png" srcset="images/model/MAN6-5.png 250w, images/model/MAN6-5x2.png 400w, images/model/MAN6-5x3.png 660w" alt="">
+                                            <img _src="images/model/MAN6-5.png", _src2="images/model/MAN6-5x2.png" src="images/model/MAN6-5x2.png" alt="">
                                         </div>
                                         <div class="anim-photo">
-
-                                            <img id="jc" class="photo-viensla" _src="images/model/MAN6-1x2.png?v=<? echo time();?>" srcset="images/model/MAN6-1.png 250w, images/model/MAN6-1x2.png 400w, images/model/MAN6-1x3.png 660w" alt="photo jc follomaton">
+                                            <img id="jc" class="photo-viensla" src="images/model/MAN6-1x2.png?v=23232323" alt="photo jc follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -178,12 +177,11 @@ $time_suffix = time();
             <div class="ribbon ribbon-green"></div>
         </div>
         <div class="racket"><img src="css/img/racket.png" alt=""></div>
-        <div id="tennisball" style="z-index:999;position:absolute;">
-            <img class="png" style="width:40px;height:40px;" src="css/img/tennis.png">
-            <img class="gif" style="display: none;width:40px;height:40px;" src="css/img/tennis.gif">
-        </div>
-
     </section>
+    <div id="tennisball" style="z-index:280;position:absolute;">
+        <img class="png" src="css/img/tennis.png">
+        <img class="gif" style="display: none;" src="css/img/tennis.gif">
+    </div>
     <div class="main-mask"></div>
     <!-- End Page Content -->
     <div class="detail-box for_man-1">
@@ -256,7 +254,7 @@ $time_suffix = time();
     <!-- 页面载入时loading-page淡入addClass=show 加载完成removeClass=show 两秒后淡出 -->
     <div class="loading-page" style="">
         <div class="inner">
-            <h1><img src="css/img/logo.png?v=<? echo date('ds',time())?>" alt=""></h1>
+            <h1><img src="css/img/logo.png?v=<?php echo date('ds',time())?>" alt=""></h1>
             <span class="progress">0%</span>
         </div>
         <div class="ribbon ribbon-blue"></div>
@@ -280,7 +278,7 @@ $time_suffix = time();
 
     <!-- Portrait -->
     <div class="portrait-box">
-        <h1><a href="javascript:;"><img src="css/img/logo.png?v=<? echo date('ds',time())?>" alt=""></a></h1>
+        <h1><a href="javascript:;"><img src="css/img/logo.png?v=<?php echo date('ds',time())?>" alt=""></a></h1>
         <div class="gif">
             <p>转至横屏，体验更佳</p>
             <img src="css/img/portrait.gif" alt="">
@@ -406,6 +404,26 @@ $time_suffix = time();
 <script type="text/javascript" src="js/jquery.transit.min.js"></script>
 <script>
     $(".tc .inner").css({height: $(window).height()-50});
+    // var src_set;
+    // var ww = window.innerWidth;
+    // if (ww < 480) {
+    //     src_set = '_src';
+    // } else if (ww >= 480 && ww < 640) {
+    //     src_set = '_src2';
+    // } else {
+    //     src_set = 'src';
+    // }
+    // console.log(src_set);
+    // $('.first-photo img,.white-photo img').each(function(k,v) {
+    //     $(v).attr('src',$(v).attr(src_set));
+    // });
+    $(".read-tc").on('touchstart',function(){
+         $(".tc").addClass("show").show();
+    });
+    $(".tc .close").on('touchstart',function(){
+         $(".tc").removeClass("show").hide();
+    });
+
     /*set content size*/
     function setContentSize() {
         var ww = window.innerWidth;
@@ -416,6 +434,11 @@ $time_suffix = time();
         /*menu*/
         $(".menu nav").css({
             height: wh-76
+        });
+
+        $("#tennisball").css({
+            left: ww-60-0.048*ww+22,
+            top: wh-ww*0.36
         });
         
         /*main*/
@@ -572,8 +595,8 @@ $time_suffix = time();
         wx.ready(function () {
             wx.onMenuShareTimeline({
                 title: ' LACOSTE互动【产品型录】中更有型男演绎LT12限量系列！速来围观！', // 分享标题
-                link: 'http://lt12.ffshtest.net/lookbook/portrait.html', // 分享链接
-                imgUrl: 'http://lt12.ffshtest.net/lookbook/images/share/lookbooksharepic.jpg', // 分享图标
+                link: 'http://www.lt12.cn/lookbook/index.php', // 分享链接
+                imgUrl: 'http://www.lt12.cn/lookbook/images/share/lookbooksharepic.jpg', // 分享图标
                 success: function () {
                 },
                 cancel: function () {
@@ -582,8 +605,8 @@ $time_suffix = time();
             wx.onMenuShareAppMessage({
                 title: 'LACOSTE互动【产品型录】中更有型男演绎LT12限量系列！速来围观！', // 分享标题
                 desc: '', // 分享描述
-                link: 'http://lt12.ffshtest.net/lookbook/portrait.html', // 分享链接
-                imgUrl: 'http://lt12.ffshtest.net/lookbook/images/share/lookbooksharepic.jpg', // 分享图标
+                link: 'http://www.lt12.cn/lookbook/index.php', // 分享链接
+                imgUrl: 'http://www.lt12.cn/lookbook/images/share/lookbooksharepic.jpg', // 分享图标
                 type: '', // 分享类型,music、video或link，不填默认为link
                 dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
                 success: function () { 
@@ -593,6 +616,8 @@ $time_suffix = time();
                     // 用户取消分享后执行的回调函数
                 }
             });
+        });
+        wx.error(function(res){
         });
     }
 </script>
