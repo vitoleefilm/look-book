@@ -16,8 +16,8 @@ $(document).ready(function() {
 
 	// 获得图片的中点，偏移量等参数
 	get_middle_line = function (container,callback) {
-		ww = $(window).width();
-    	wh = $(window).height();
+		ww = ($(window).width() < 980) ? 980 : $(window).width();
+    	wh = ($(window).height() < 550) ? 550 : $(window).height();
 		offset = container.offset();
 		middle_top = offset.top + (container.height()*0.23);
 		middle_left = offset.left + (container.width()*0.66);
@@ -37,8 +37,8 @@ $(document).ready(function() {
     	// if ($('body').hasClass('pic-loaded')) {
     	// 	return;
     	// }
-    	ww = $(window).width();
-    	wh = $(window).height();
+    	ww = ($(window).width() < 980) ? 980 : $(window).width();
+    	wh = ($(window).height() < 550) ? 550 : $(window).height();
     	setContentSize();
     	if (!$('body').hasClass('pic-loaded')) {
 	    	$('.loading-page').css('display','block');
@@ -86,7 +86,7 @@ $(document).ready(function() {
 				}
 			});
 		});
-		console.log(container_attr);
+		// console.log(container_attr);
     }
     get_orientation();
     // window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", get_orientation, false);
@@ -208,8 +208,14 @@ $(document).ready(function() {
 	$('#flux-site').mousemove(function() {
 		$('#tennisball').css({left:'',top:''});
 		var e = getEvent();
-		x = e.clientX;
-		y = e.clientY;
+		if (e.clientX) {
+			x = e.clientX;
+			y = e.clientY;
+		} else if (e.pageX) {
+			x = e.pageX;
+			y = e.pageY;
+		}
+		
 		$('#tennisball').css({'left':x-bw,'top':y-bw});
 		for (index in container_attr) {
 			get_offset(index,container_attr[index]);
