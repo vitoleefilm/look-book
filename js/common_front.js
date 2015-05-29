@@ -37,8 +37,8 @@ $(document).ready(function() {
     	// if ($('body').hasClass('pic-loaded')) {
     	// 	return;
     	// }
-    	ww = window.innerWidth;
-    	wh = window.innerHeight;
+    	ww = $(window).width();
+    	wh = $(window).height();
     	setContentSize();
     	if (!$('body').hasClass('pic-loaded')) {
 	    	$('.loading-page').css('display','block');

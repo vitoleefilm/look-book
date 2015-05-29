@@ -371,7 +371,9 @@
 <script>
     /*set content size*/
     function setContentSize() {
+        console.log($(window).height()+' '+window.innerHeight);
         var ww = $(window).width();
+        console.log(ww);
         var wh = $(window).height();
 
         if(ww>980){
