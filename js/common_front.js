@@ -18,7 +18,6 @@ $(document).ready(function() {
 	get_middle_line = function (container,callback) {
 		ww = $(window).width();
     	wh = $(window).height();
-    	dw = $(document).width();
 		offset = container.offset();
 		middle_top = offset.top + (container.height()*0.23);
 		middle_left = offset.left + (container.width()*0.66);
@@ -26,7 +25,7 @@ $(document).ready(function() {
 		// 为了防止计算tan值时x_offset接近0或等于0导致浏览器崩溃，事先算好某个范围，在这个范围内人头的方向是垂直的，3.73为tan(75度)的值
 		x_range = ((container.height()/3.73)).toFixed(2);
 		//length是一张头像默认高度
-		length = dw*0.308;
+		length = ww*0.308;
 		container_attr[container.attr('_index')] = {'middle_top':middle_top,'middle_left':middle_left,'top':offset.top,'bottom':offset.top + container.height(),'left':offset.left,'right':offset.left + container.width(),'x_range':x_range,'length':length,'width':container.width()};
 		if (callback) {
 			callback && callback();
@@ -35,15 +34,14 @@ $(document).ready(function() {
 
 	//判断手机横竖屏状态：  
     function get_orientation() {
-    	if ($('body').hasClass('pic-loaded')) {
-    		return;
-    	}
+    	// if ($('body').hasClass('pic-loaded')) {
+    	// 	return;
+    	// }
     	ww = window.innerWidth;
     	wh = window.innerHeight;
-    	dw = $(document).width();
+    	setContentSize();
     	if (!$('body').hasClass('pic-loaded')) {
 	    	$('.loading-page').css('display','block');
-	    	setContentSize();
 	    	// $('.loading-page').fadeIn(300,function() {
 	    	$('.loading-page').addClass('show');
 	    	// });
@@ -63,7 +61,7 @@ $(document).ready(function() {
         $('.col').each(function() {
 			var _this = $(this);
 			get_middle_line(_this,function() {
-				_this.find('.anim-photo img').attr('style','top:-'+((dw*0.308)*12+0.5)+'');
+				_this.find('.anim-photo img').attr('style','top:-'+((ww*0.308)*12+0.5)+'');
 				if (!$('body').hasClass('pic-loaded')) {
 					_this.find('.anim-photo img').load(function() {
 						var percent = (k*17);
@@ -88,12 +86,13 @@ $(document).ready(function() {
 				}
 			});
 		});
+		console.log(container_attr);
     }
     get_orientation();
     // window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", get_orientation, false);
-	// $(window).resize(function() {
-	// 	get_orientation();
-	// });
+	$(window).resize(function() {
+		get_orientation();
+	});
 	/**
 	 * 获得背景偏移量
 	 */
@@ -165,6 +164,23 @@ $(document).ready(function() {
 		container.find('.anim-photo img').attr('style','top:'+top_offset+'');
 	}
 
+	 function getEvent() {
+        if(document.all)   return window.event;    
+        func=getEvent.caller;        
+        while(func!=null){  
+            var arg0=func.arguments[0];
+            if(arg0)
+            {
+              if((arg0.constructor==Event || arg0.constructor ==MouseEvent) || (typeof(arg0)=="object" && arg0.preventDefault && arg0.stopPropagation))
+              {  
+              return arg0;
+              }
+            }
+            func=func.caller;
+        }
+        return null;
+    }
+
 	// $('body').on('touchstart',function(e) {
 	// 	e.preventDefault();
 	// 	x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
@@ -188,26 +204,12 @@ $(document).ready(function() {
  //        _detail.addClass("show");
  //    });
 	// $('#flux-site,#tennisball,.click-fix-5,.click-fix-4,.click-fix-6').on('touchmove',function(e) {
-	$('#tennisball').on('touchmove',function(e) {
-		e.preventDefault();
-		if ($('.main').hasClass('showing')) {
-			return;
-		}
-		x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
-        y = e.originalEvent.targetTouches[0].clientY.toFixed(2);
-		$('#tennisball').css({'left':x-bw,'top':y-bw});
-		for (index in container_attr) {
-			get_offset(index,container_attr[index]);
-		} 
-	});
-	$('.main').on('touchmove',function(e) {
-		e.preventDefault();
-	});
-	$('#flux-site').mousemove(function(e) {
+	
+	$('#flux-site').mousemove(function() {
 		$('#tennisball').css({left:'',top:''});
-		e.preventDefault();
-		x = event.clientX;
-		y = event.clientY;
+		var e = getEvent();
+		x = e.clientX;
+		y = e.clientY;
 		$('#tennisball').css({'left':x-bw,'top':y-bw});
 		for (index in container_attr) {
 			get_offset(index,container_attr[index]);
@@ -223,125 +225,4 @@ $(document).ready(function() {
 	// 	}
 	// });
 
-////////////////////////////////////////////点击事件//////////////////////////////////////////////////
- 	$(".game-guide .close").on('touchstart',function(e){
-		$('#tennisball').find('.png').hide();
-		$('#tennisball').css({'z-index':999});
-		$('#tennisball').find('.gif').show();
-
-        $(".game-guide").removeClass("show");
-
-        setTimeout(function() {
-			$('#tennisball').find('.gif').hide();
-			$('#tennisball').css({'z-index':200});
-			$('#tennisball').find('.png').show();
-		},1000);
-    });
-
-    /*Product Detail*/
-    $("#equipe .block-content .content-partie .intro-partie .col").on('touchstart',function(){
-    	// if ($('.main').hasClass('showing')) {
-    	// 	return;
-    	// }
-    	$('.main').addClass('showing');
-    	// $('#tennisball').css({'z-index':999});
-
-        var _id=$(this).attr('id');
-        var _detail = $('.detail-box.for_'+_id);
-        $(".detail-box").removeClass("show");
-
-        $(this).siblings(".col").addClass("blur");
-        $(this).siblings(".col").removeClass("active");
-        $(this).removeClass("blur");
-        $(this).addClass("active");
-        _detail.addClass("show");
-    });
-    $(".detail-box .close").click(function(e){
-        $('#tennisball').find('.png').hide();
-		$('#tennisball').find('.gif').show();
-		
-		$(".detail-box").removeClass("show");
-        $(".main").removeClass("white showing");
-        $("#equipe .block-content .content-partie .intro-partie .col").removeClass("active").removeClass("blur");
-		setTimeout(function() {
-			$('#tennisball').find('.gif').hide();
-			$('#tennisball').css({'z-index':200});
-			$('#tennisball').find('.png').show();
-		},1000);
-    });
-
-    $(".click-fix-4").on('touchstart',function(){
-    	// if ($('.main').hasClass('showing')) {
-    	// 	return;
-    	// }
-    	$('.main').addClass('showing');
-
-        $(".detail-box").removeClass("show");
-        $(".col#man-4").siblings(".col").addClass("blur");
-        $(".col#man-4").siblings(".col").removeClass("active");
-        $(".col#man-4").removeClass("blur");
-        $(".col#man-4").addClass("active");
-        $(".detail-box.for_man-4").addClass("show");
-    });
-    $(".click-fix-5").on('touchstart',function(){
-    	// if ($('.main').hasClass('showing')) {
-    	// 	return;
-    	// }
-    	$('.main').addClass('showing');
-
-        $(".detail-box").removeClass("show");
-        $(".col#man-5").siblings(".col").addClass("blur");
-        $(".col#man-5").siblings(".col").removeClass("active");
-        $(".col#man-5").removeClass("blur");
-        $(".col#man-5").addClass("active");
-        $(".detail-box.for_man-5").addClass("show");
-    });
-    $(".click-fix-6").on('touchstart',function(){
-    	// if ($('.main').hasClass('showing')) {
-    	// 	return;
-    	// }
-    	$('.main').addClass('showing');
-
-        $(".detail-box").removeClass("show");
-        $(".col#man-6").siblings(".col").addClass("blur");
-        $(".col#man-6").siblings(".col").removeClass("active");
-        $(".col#man-6").removeClass("blur");
-        $(".col#man-6").addClass("active");
-        $(".detail-box.for_man-6").addClass("show");
-    });
-
-    $(".racket").on('touchstart',function(){
-        // if ($('.main').hasClass('showing')) {
-        //     return;
-        // }
-        $('.main').addClass('showing');
-
-        $(".detail-box").removeClass("show");
-        $(".col").addClass("blur");
-        $(".col").removeClass("active");
-        $(".detail-box.for_racket").addClass("show");
-    });
-
-    /*menu*/
-    $(".menu-button").click(function(){
-        if(!$(this).hasClass("in")){
-            $(this).addClass("in");
-            $(".menu").addClass("show");
-            $(".main-mask").addClass("show");
-        } else {
-            $(this).removeClass("in");
-            $(".menu").removeClass("show");
-            $(".main-mask").removeClass("show");
-        }
-    });
-    $(".main-mask").click(function(){
-        $(this).removeClass("show");
-        $(".menu-button").removeClass("in");
-        $(".menu").removeClass("show");
-    });
-
-    /*loadding page*/
-    // $(".loading-page").click(function(){
-    //     $(this).toggleClass("show");
-    // });
 });
