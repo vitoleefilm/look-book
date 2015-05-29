@@ -38,6 +38,7 @@ $(document).ready(function() {
     	// 	return;
     	// }
     	ww = ($(window).width() < 980) ? 980 : $(window).width();
+    	console.log(ww);
     	wh = ($(window).height() < 550) ? 550 : $(window).height();
     	setContentSize();
     	if (!$('body').hasClass('pic-loaded')) {
@@ -58,10 +59,12 @@ $(document).ready(function() {
 	    	},3000);
     	}
     	// 将图片属性放在标签中以免重复计算
+    	default_offset = (ww*0.308)*12+3;
+    	console.log(default_offset);
         $('.col').each(function() {
 			var _this = $(this);
 			get_middle_line(_this,function() {
-				_this.find('.anim-photo img').attr('style','top:-'+((ww*0.308)*12+0.5)+'');
+				_this.find('.anim-photo img').attr('style','top:-'+default_offset+'px');
 				if (!$('body').hasClass('pic-loaded')) {
 					_this.find('.anim-photo img').load(function() {
 						var percent = (k*17);
@@ -86,7 +89,6 @@ $(document).ready(function() {
 				}
 			});
 		});
-		// console.log(container_attr);
     }
     get_orientation();
     // window.addEventListener("onorientationchange" in window ? "orientationchange" : "resize", get_orientation, false);
@@ -160,8 +162,8 @@ $(document).ready(function() {
 			}
 		}
 		length = attr.length;
-		top_offset = -(length*size+0.5);
-		container.find('.anim-photo img').attr('style','top:'+top_offset+'');
+		top_offset = -(length*size+3);
+		container.find('.anim-photo img').attr('style','top:'+top_offset+'px');
 	}
 
 	 function getEvent() {
@@ -180,30 +182,6 @@ $(document).ready(function() {
         }
         return null;
     }
-
-	// $('body').on('touchstart',function(e) {
-	// 	e.preventDefault();
-	// 	x = e.originalEvent.targetTouches[0].clientX.toFixed(2);
- //        y = e.originalEvent.targetTouches[0].clientY.toFixed(2);
-	// 	$('#tennisball').css({'left':x-15,'top':y-15});
-	// 	for (index in container_attr) {
-	// 		get_offset(index,container_attr[index]);
-	// 	} 
-	// });
-
-	// 各种点击事件和触摸事件
-	// $("#equipe .block-content .content-partie .intro-partie .col").on('touchstart',function(e){
-	// 	e.preventDefault();
- //        var _id=$(this).attr('id');
- //        var _detail = $('.detail-box.for_'+_id);
- //        $(".main").addClass("white");
- //        $(this).siblings(".col").addClass("blur");
- //        $(this).siblings(".col").removeClass("active");
- //        $(this).removeClass("blur");
- //        $(this).addClass("active");
- //        _detail.addClass("show");
- //    });
-	// $('#flux-site,#tennisball,.click-fix-5,.click-fix-4,.click-fix-6').on('touchmove',function(e) {
 	
 	$('#flux-site').mousemove(function() {
 		$('#tennisball').css({left:'',top:''});
@@ -221,14 +199,5 @@ $(document).ready(function() {
 			get_offset(index,container_attr[index]);
 		} 
 	});
-
-	// $(document).mousemove(function() {
-	// 	x = event.clientX;
-	// 	y = event.clientY;
-	// 	$('#tennisball').css({'left':x-40,'top':y-40});
-	// 	for (index in container_attr) {
-	// 		get_offset(index,container_attr[index]);
-	// 	}
-	// });
 
 });
