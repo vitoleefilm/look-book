@@ -375,148 +375,301 @@
         var ww = $(window).width();
         var wh = $(window).height();
 
-        $("body").css({width: ww, height: wh});
+        if(ww>980){
+            $("body").css({width: ww});
 
-        $("h1.logo").css({width: dw*0.08, top: wh*0.034, marginLeft: -dw*0.04})
+            $("h1.logo").css({width: ww*0.08, marginLeft: -ww*0.04})
+            
+            /*main*/
+            $(".main").css({width: ww});
+            $(".main-mask").css({width: ww});
+            $(".ribbon").css({height: ww*0.008});
+            $(".intro-partie").css({width: ww});
+            $("#equipe .block-content .content-partie .intro-partie .col").css({
+                width: ww*0.28,
+                height: ww*0.308
+            });
+            $("#equipe .block-content .content-partie .intro-partie .col#man-1").css({
+                marginLeft: -ww*0.47
+            });
+            $("#equipe .block-content .content-partie .intro-partie .col#man-2").css({
+                marginLeft: -ww*0.25
+            });
+            $("#equipe .block-content .content-partie .intro-partie .col#man-3").css({
+                marginLeft: -ww*0.05
+            });
+            $("#equipe .block-content .content-partie .intro-partie .col#man-4").css({
+                bottom: ww*0.113,
+                marginLeft: -ww*0.345
+            });
+            $("#equipe .block-content .content-partie .intro-partie .col#man-5").css({
+                bottom: ww*0.113,
+                marginLeft: -ww*0.28/1.9
+            });
+            $("#equipe .block-content .content-partie .intro-partie .col#man-6").css({
+                bottom: ww*0.113,
+                marginLeft: ww*0.08
+            });
+            $(".click-fix-4").css({
+                width: ww*0.06,
+                height: ww*0.23,
+                marginLeft: -ww*0.195,
+                bottom: ww*0.15,
+            });
+            $(".click-fix-5").css({
+                width: ww*0.06,
+                height: ww*0.23,
+                marginLeft: 0,
+                bottom: ww*0.14,
+            });
+            $(".click-fix-6").css({
+                width: ww*0.06,
+                height: ww*0.23,
+                marginLeft: ww*0.225,
+                bottom: ww*0.14,
+            });
+            $(".click-mask-1").css({
+                width: ww*0.145,
+                height: ww*0.3,
+                bottom: ww*0,
+                left: 0
+            });
+            $(".click-mask-2").css({
+                width: ww*0.14,
+                height: ww*0.2,
+                bottom: ww*0.21,
+                marginLeft: -ww*0.44
+            });
+            $(".click-mask-3").css({
+                width: ww*0.11,
+                height: ww*0.2,
+                bottom: ww*0.28,
+                marginLeft: -ww*0.11
+            });
+            $(".click-mask-4").css({
+                width: ww*0.7,
+                height: ww*0.1,
+                bottom: ww*0.375,
+                marginLeft: -ww*0.35
+            });
+            $(".click-mask-5").css({
+                width: ww*0.15,
+                height: ww*0.2,
+                bottom: ww*0.3,
+                marginLeft: ww*0.07
+            });
+            $(".click-mask-6").css({
+                width: ww*0.15,
+                height: ww*0.2,
+                bottom: ww*0.3,
+                marginLeft: ww*0.285
+            });
+            $(".click-mask-7").css({
+                width: ww*0.03,
+                height: ww*0.11,
+                bottom: 0,
+                marginLeft: ww*0.025
+            });
+            $(".click-mask-8").css({
+                width: ww*0.06,
+                height: ww*0.11,
+                bottom: 0,
+                marginLeft: -ww*0.205
+            });
+            $(".bench").css({height: ww*0.113});
 
-        /*menu*/
-        // $(".menu nav").css({
-        //     height: wh-76
-        // });
-        
-        /*main*/
-        $(".main").css({width: dw, height: wh});
-        $(".ribbon").css({height: dw*0.008});
-        $(".intro-partie").css({width: dw, height: wh});
-        $("#equipe .block-content .content-partie .intro-partie .col").css({
-            width: dw*0.28,
-            height: dw*0.308
-        });
-        $("#equipe .block-content .content-partie .intro-partie .col#man-1").css({
-            marginLeft: -dw*0.47
-        });
-        $("#equipe .block-content .content-partie .intro-partie .col#man-2").css({
-            marginLeft: -dw*0.25
-        });
-        $("#equipe .block-content .content-partie .intro-partie .col#man-3").css({
-            marginLeft: -dw*0.05
-        });
-        $("#equipe .block-content .content-partie .intro-partie .col#man-4").css({
-            bottom: dw*0.113,
-            marginLeft: -dw*0.345
-        });
-        $("#equipe .block-content .content-partie .intro-partie .col#man-5").css({
-            bottom: dw*0.113,
-            marginLeft: -dw*0.28/1.9
-        });
-        $("#equipe .block-content .content-partie .intro-partie .col#man-6").css({
-            bottom: dw*0.113,
-            marginLeft: dw*0.08
-        });
-        $(".click-fix-4").css({
-            width: dw*0.06,
-            height: dw*0.23,
-            marginLeft: -dw*0.195,
-            bottom: dw*0.15,
-        });
-        $(".click-fix-5").css({
-            width: dw*0.06,
-            height: dw*0.23,
-            marginLeft: 0,
-            bottom: dw*0.14,
-        });
-        $(".click-fix-6").css({
-            width: dw*0.06,
-            height: dw*0.23,
-            marginLeft: dw*0.225,
-            bottom: dw*0.14,
-        });
-        $(".click-mask-1").css({
-            width: dw*0.145,
-            height: dw*0.3,
-            bottom: dw*0,
-            left: 0
-        });
-        $(".click-mask-2").css({
-            width: dw*0.14,
-            height: dw*0.2,
-            bottom: dw*0.21,
-            marginLeft: -dw*0.44
-        });
-        $(".click-mask-3").css({
-            width: dw*0.11,
-            height: dw*0.2,
-            bottom: dw*0.28,
-            marginLeft: -dw*0.11
-        });
-        $(".click-mask-4").css({
-            width: dw*0.7,
-            height: dw*0.1,
-            bottom: dw*0.375,
-            marginLeft: -dw*0.35
-        });
-        $(".click-mask-5").css({
-            width: dw*0.15,
-            height: dw*0.2,
-            bottom: dw*0.3,
-            marginLeft: dw*0.07
-        });
-        $(".click-mask-6").css({
-            width: dw*0.15,
-            height: dw*0.2,
-            bottom: dw*0.3,
-            marginLeft: dw*0.285
-        });
-        $(".click-mask-7").css({
-            width: dw*0.03,
-            height: dw*0.11,
-            bottom: 0,
-            marginLeft: dw*0.025
-        });
-        $(".click-mask-8").css({
-            width: dw*0.06,
-            height: dw*0.11,
-            bottom: 0,
-            marginLeft: -dw*0.205
-        });
-        $(".bench").css({height: dw*0.113});
+            $(".racket").css({
+                width: ww*0.085,
+                marginLeft: ww*0.275
+            });
+            $("#tennisball").css({
+                left: ww-60-0.048*ww+22
+            });
 
-        $(".racket").css({
-            width: dw*0.085,
-            marginLeft: dw*0.275
-        });
-        $("#tennisball").css({
-            left: dw-60-0.048*dw+22,
-            top: wh-dw*0.36
-        });
+            /*detail-box*/
+            $(".detail-box").css({
+                width: ww*0.24,
+                height: ww*0.33
+            });
+            $(".detail-box.for_man-1, .detail-box.for_man-2, .detail-box.for_man-4").css({
+                marginRight: -ww*0.34
+            });
+            $(".detail-box.for_man-3, .detail-box.for_man-5, .detail-box.for_man-6").css({
+                marginLeft: -ww*0.34
+            });
+            $(".detail-box.for_racket").css({
+                marginLeft: -ww*0.12-40
+            });
+            $(".detail-box .pic").css({
+                height: ww*0.32-120
+            });
+            $(".detail-box a").css({
+                height: ww*0.025,
+                lineHeight: ww*0.025+'px'
+            });
+        }
 
-        /*detail-box*/
-        $(".detail-box").css({
-            width: dw*0.24,
-            height: dw*0.33,
-            bottom: wh*0.093
-        });
-        $(".detail-box.for_man-1, .detail-box.for_man-2, .detail-box.for_man-4").css({
-            marginRight: -dw*0.34
-        });
-        $(".detail-box.for_man-3, .detail-box.for_man-5, .detail-box.for_man-6").css({
-            marginLeft: -dw*0.34
-        });
-        $(".detail-box.for_racket").css({
-            marginLeft: -dw*0.12-40
-        });
-        $(".detail-box .pic").css({
-            height: dw*0.32-120
-        });
-        $(".detail-box a").css({
-            height: dw*0.025,
-            lineHeight: dw*0.025+'px'
-        });
+        if(ww<980) {
+            $("body").css({width: 980});
 
-        /*tc*/
-        // $(".tc").css({marginLeft: -dw});
-        // $(".tc.show").css({translate: [100,0]});
-        // $(".tc .inner").css({height: wh-50});
+            $("h1.logo").css({width: 980*0.08, marginLeft: -980*0.04})
+            
+            /*main*/
+            $(".main").css({width: 980});
+            $(".main-mask").css({width: 980});
+            $(".ribbon").css({height: 980*0.008});
+            $(".intro-partie").css({width: 980});
+            $("#equipe .block-content .content-partie .intro-partie .col").css({
+                width: 980*0.28,
+                height: 980*0.308
+            });
+            $("#equipe .block-content .content-partie .intro-partie .col#man-1").css({
+                marginLeft: -980*0.47
+            });
+            $("#equipe .block-content .content-partie .intro-partie .col#man-2").css({
+                marginLeft: -980*0.25
+            });
+            $("#equipe .block-content .content-partie .intro-partie .col#man-3").css({
+                marginLeft: -980*0.05
+            });
+            $("#equipe .block-content .content-partie .intro-partie .col#man-4").css({
+                bottom: 980*0.113,
+                marginLeft: -980*0.345
+            });
+            $("#equipe .block-content .content-partie .intro-partie .col#man-5").css({
+                bottom: 980*0.113,
+                marginLeft: -980*0.28/1.9
+            });
+            $("#equipe .block-content .content-partie .intro-partie .col#man-6").css({
+                bottom: 980*0.113,
+                marginLeft: 980*0.08
+            });
+            $(".click-fix-4").css({
+                width: 980*0.06,
+                height: 980*0.23,
+                marginLeft: -980*0.195,
+                bottom: 980*0.15,
+            });
+            $(".click-fix-5").css({
+                width: 980*0.06,
+                height: 980*0.23,
+                marginLeft: 0,
+                bottom: 980*0.14,
+            });
+            $(".click-fix-6").css({
+                width: 980*0.06,
+                height: 980*0.23,
+                marginLeft: 980*0.225,
+                bottom: 980*0.14,
+            });
+            $(".click-mask-1").css({
+                width: 980*0.145,
+                height: 980*0.3,
+                bottom: 980*0,
+                left: 0
+            });
+            $(".click-mask-2").css({
+                width: 980*0.14,
+                height: 980*0.2,
+                bottom: 980*0.21,
+                marginLeft: -980*0.44
+            });
+            $(".click-mask-3").css({
+                width: 980*0.11,
+                height: 980*0.2,
+                bottom: 980*0.28,
+                marginLeft: -980*0.11
+            });
+            $(".click-mask-4").css({
+                width: 980*0.7,
+                height: 980*0.1,
+                bottom: 980*0.375,
+                marginLeft: -980*0.35
+            });
+            $(".click-mask-5").css({
+                width: 980*0.15,
+                height: 980*0.2,
+                bottom: 980*0.3,
+                marginLeft: 980*0.07
+            });
+            $(".click-mask-6").css({
+                width: 980980*0.15,
+                height: 980980*0.2,
+                bottom: 980980*0.3,
+                marginLeft: 980980*0.285
+            });
+            $(".click-mask-7").css({
+                width: 980980*0.03,
+                height: 980980*0.11,
+                bottom: 0,
+                marginLeft: 980980*0.025
+            });
+            $(".click-mask-8").css({
+                width: 980*0.06,
+                height: 980*0.11,
+                bottom: 0,
+                marginLeft: -980*0.205
+            });
+            $(".bench").css({height: 980*0.113});
+
+            $(".racket").css({
+                width: 980*0.085,
+                marginLeft: 980*0.275
+            });
+            $("#tennisball").css({
+                left: 980-60-0.048*980+22
+            });
+
+            /*detail-box*/
+            $(".detail-box").css({
+                width: 980*0.24,
+                height: 980*0.33
+            });
+            $(".detail-box.for_man-1, .detail-box.for_man-2, .detail-box.for_man-4").css({
+                marginRight: -980*0.34
+            });
+            $(".detail-box.for_man-3, .detail-box.for_man-5, .detail-box.for_man-6").css({
+                marginLeft: -980*0.34
+            });
+            $(".detail-box.for_racket").css({
+                marginLeft: -980*0.12-40
+            });
+            $(".detail-box .pic").css({
+                height: 980*0.32-120
+            });
+            $(".detail-box a").css({
+                height: 980*0.025,
+                lineHeight: 980*0.025+'px'
+            });
+        }
+
+        if(wh>550) {
+            $("body").css({height: wh});
+            $(".main").css({height: wh});
+            $(".main-mask").css({height: wh});
+            $(".intro-partie").css({height: wh});
+            $("#tennisball").css({
+                top: wh-980*0.36
+            });
+            $(".detail-box").css({
+                bottom: wh*0.093
+            });
+        }
+
+        if(wh<550) {
+            $("body").css({height: 550});
+            $(".main").css({height: 550});
+            $(".main-mask").css({height: 550});
+            $(".intro-partie").css({height: 550});
+            $("#tennisball").css({
+                top: 550-980*0.36
+            });
+            $(".detail-box").css({
+                bottom: 550*0.093
+            });
+        }
+
+    
         
         
     };

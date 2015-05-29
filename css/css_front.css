@@ -450,7 +450,7 @@ h1.logo img {
     min-height: 550px !important;
     background-image: url(front/main_bg.png);
     background-repeat: no-repeat;
-    background-size: 120% auto;
+    background-size: 100% auto;
     background-position: 50% 0;
     overflow: hidden;
     z-index: 100;
@@ -555,8 +555,8 @@ h1.logo img {
 #flux-site .ribbon-red {
     display: block;
     position: absolute;
-    width: 110%;
-    right: -10%;
+    width: 150%;
+    right: -20%;
     top: 40%;
     background: #cd2927;
     z-index: 10;
