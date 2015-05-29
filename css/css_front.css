@@ -504,12 +504,13 @@ h1.logo img {
     position: relative;
     width: 100px;
     height: 100px;
+    top: -50px;
 }
 #tennisball svg {
     position: relative;
     width: 60px;
     height: 60px;
-    top: 20px;
+    top: -30px;
     left: 20px;
 }
 .bench {
