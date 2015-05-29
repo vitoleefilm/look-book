@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>LACOSTE LOOKBOOK</title>
-    <link rel="stylesheet" href="css/css_front.css">
+    <link rel="stylesheet" href="css/css_front.css?v=20150529">
     <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
 </head>
 
@@ -155,13 +155,13 @@
     </section>
     <div class="main-mask"></div>
     <div id="tennisball">
-        <svg width="60" height="60" pointer-events="none"
+        <svg class="png" width="60" height="60" pointer-events="none"
             xmlns="css/front/tennisball.svg"
             xmlns:xlink="css/front/tennisball.svg">
             <image x="0" y="0" width="60" height="60"
               xlink:href="css/front/tennisball.svg" />
         </svg>
-        <img style="display:none" src="css/front/tennisball.gif">
+        <img class="gif" style="display:none" src="css/front/tennisball.gif">
     </div>
     <!-- End Page Content -->
     <div class="detail-box for_man-1">
@@ -372,6 +372,7 @@
     /*set content size*/
     function setContentSize() {
         var dw = $(document).width();
+        console.log(dw);
         var ww = $(window).width();
         var wh = $(window).height();
 
@@ -818,7 +819,7 @@
 
 
 </script>
-<!-- <script type="text/javascript" src="js/common.js"></script> -->
+<script type="text/javascript" src="js/common_front.js"></script>
 </body>
 
 </html>
