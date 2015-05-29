@@ -748,7 +748,7 @@ h1.logo img {
     color: #717171;
     opacity: 0;
     visibility: hidden;
-    z-index: 240;
+    z-index: 140;
     transition-property: all;
     transition-duration: .3s;
     transition-timing-function: ease-out;
