@@ -499,18 +499,31 @@ h1.logo img {
     pointer-events: none;
     z-index: 280;
 }
-#tennisball img {
+#tennisball .gif {
     display: block;
     position: relative;
     width: 100px;
     height: 100px;
 }
-#tennisball svg {
+#tennisball .png {
+    display: block;
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+#tennisball .png {
+    display: none\0 !important;
+}
+#tennisball .svg {
+    display: none;
     position: relative;
     width: 60px;
     height: 60px;
     top: 20px;
     left: 20px;
+}
+#tennisball .svg {
+    display: block\0 !important;
 }
 .bench {
     position: absolute;
