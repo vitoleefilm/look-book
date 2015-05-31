@@ -513,17 +513,21 @@ h1.logo img {
 }
 #tennisball .png {
     display: none\0 !important;
+    width: 0\0 !important;
+    height: 0\0 !important;
 }
 #tennisball .svg {
     display: none;
-    position: relative;
-    width: 60px;
-    height: 60px;
-    top: 20px;
-    left: 20px;
+    width: 0;
+    height: 0;
 }
 #tennisball .svg {
     display: block\0 !important;
+    position: relative\0;
+    width: 60px\0;
+    height: 60px\0;
+    top: 20px\0;
+    left: 20px\0;
 }
 .bench {
     position: absolute;
