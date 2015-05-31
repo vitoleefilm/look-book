@@ -183,7 +183,7 @@ $(document).ready(function() {
         return null;
     }
 	
-	$('#flux-site').mousemove(function() {
+	$(document).mousemove(function() {
 		$('#tennisball').css({left:'',top:''});
 		var e = getEvent();
 		if (e.clientX) {
