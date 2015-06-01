@@ -32,10 +32,10 @@ $time_suffix = time();
              <ul>
                 <li><a class="red" href="http://www.lt12.cn/rltennis">读爱网球</a>
                 </li>
-                <!-- <li><a class="green" href="http://www.lt12.cn/pong">爱情对对碰</a>
+                <li><a class="green" href="http://www.lt12.cn/pong">爱情对对碰</a>
                 </li>
                 <li><a class="blue" href="http://www.lt12.cn/scan">挑战快拍手</a>
-                </li> -->
+                </li>
                 <li><a class="grey" href="http://www.lt12.cn/info">0元飞巴黎</a>
                 </li>
                 <li><a class="red" href="http://www.lt12.cn/lookbook">产品型录</a>
@@ -79,15 +79,15 @@ $time_suffix = time();
                                     <div class="cadre-photo">
                                         <div class="first-photo" style="display:none;">
 
-                                            <img _src="images/model/MAN2-3.png", _src2="images/model/MAN2-3x2.png" src="images/model/MAN2-3x2.png" alt="photo nico nb">
+                                            <img _src="images/model/MAN2-3.png", _src2="images/model/MAN2-3x2.png" src="images/model/MAN2-4x2.png" alt="photo nico nb">
                                         </div>
                                         <div class="white-photo" style="display:none;">
 
-                                            <img _src="images/model/MAN2-5.png", _src2="images/model/MAN2-5x2.png" src="images/model/MAN2-5x2.png" alt="">
+                                            <img _src="images/model/MAN2-5.png", _src2="images/model/MAN2-5x2.png" src="images/model/MAN2-6x2.png" alt="">
                                         </div>
                                         <div class="anim-photo">
 
-                                            <img id="niko" class="photo-viensla" src="images/model/MAN2-1x2.png?v=20150525" alt="photo nico follomaton">
+                                            <img id="niko" class="photo-viensla" src="images/model/MAN2-2x2.png?v=20150525" alt="photo nico follomaton">
                                         </div>
                                     </div>
                                 </div>
@@ -200,7 +200,7 @@ $time_suffix = time();
             <img src="images/product/02.png" alt="">
         </div>
         <span class="price">价格：990 元</span>
-        <a target="_blank" href="http://item.jd.com/1543281789.html">立即购买</a>
+        <a href="javascript:;"  style="border:none;">已售罄</a>
     </div>
     <div class="detail-box for_man-3">
         <button class="close">关闭</button>

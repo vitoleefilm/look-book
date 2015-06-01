@@ -43,9 +43,7 @@ $(document).ready(function() {
     	setContentSize();
     	if (!$('body').hasClass('pic-loaded')) {
 	    	$('.loading-page').css('display','block');
-	    	// $('.loading-page').fadeIn(300,function() {
 	    	$('.loading-page').addClass('show');
-	    	// });
 	    	var k = 1;
 	    	setTimeout(function() {
 	    		if ($('.loading-page').hasClass('show') && !$('.loading-page').hasClass('fading')) {
@@ -60,7 +58,6 @@ $(document).ready(function() {
     	}
     	// 将图片属性放在标签中以免重复计算
     	default_offset = (ww*0.308)*12+3;
-    	console.log(default_offset);
         $('.col').each(function() {
 			var _this = $(this);
 			get_middle_line(_this,function() {

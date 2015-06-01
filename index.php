@@ -32,10 +32,10 @@ $time_suffix = time();
             <ul>
                 <li><a class="red" href="http://www.lt12.cn/rltennis">读爱网球</a>
                 </li>
-                <!-- <li><a class="green" href="http://www.lt12.cn/pong">爱情对对碰</a>
+                <li><a class="green" href="http://www.lt12.cn/pong">爱情对对碰</a>
                 </li>
                 <li><a class="blue" href="http://www.lt12.cn/scan">挑战快拍手</a>
-                </li> -->
+                </li>
                 <li><a class="grey" href="http://www.lt12.cn/info">0元飞巴黎</a>
                 </li>
                 <li><a class="red" href="http://www.lt12.cn/lookbook">产品型录</a>
