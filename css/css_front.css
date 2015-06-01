@@ -869,7 +869,7 @@ h1.logo img {
     left: 0;
     bottom: 0;
     padding-left: 20px;
-    font-size: 14px;
+    font-size: 10px;
     line-height: 40px;
     color: #777;
     z-index: 300;
@@ -879,7 +879,7 @@ h1.logo img {
     position: absolute;
     right: 20px;
     bottom: 0;
-    font-size: 14px;
+    font-size: 10px;
     line-height: 40px;
     color: #777;
     z-index: 300;
