@@ -837,9 +837,17 @@ h1.logo img {
     -ms-transition: all .2s ease-out;
     transition: all .2s ease-out;
 }
+.detail-box a.soldout {
+    border: none;
+}
 .detail-box a:hover {
     background: #717171;
     color: #fff;
+}
+.detail-box a.soldout:hover {
+    color: #717171;
+    background: none;
+    cursor: default;
 }
 .racket {
     display: block;

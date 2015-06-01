@@ -730,6 +730,9 @@ button {
     border: 1px solid #717171;
     text-align: center;
 }
+.detail-box a.soldout {
+    border: none;
+}
 .racket {
     display: block;
     position: absolute;
